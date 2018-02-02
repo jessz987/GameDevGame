@@ -13,7 +13,7 @@ public class MarketRightSignController : MonoBehaviour {
         {
             Debug.Log("door");
 
-            SceneManager.currentScene = "Market";
+            SceneManage.previousScene = "Market";
             SceneManager.LoadScene("Rooftop");
         }
     }

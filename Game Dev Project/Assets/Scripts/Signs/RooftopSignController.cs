@@ -13,7 +13,7 @@ public class RooftopSignController : MonoBehaviour
         {
             Debug.Log("door");
 
-            SceneManager.currentScene = "Rooftop";
+            SceneManage.previousScene = "Rooftop";
             SceneManager.LoadScene("Market");
         }
     }

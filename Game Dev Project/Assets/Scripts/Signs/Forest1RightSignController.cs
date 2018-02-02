@@ -13,7 +13,14 @@ public class Forest1RightSignController : MonoBehaviour {
         {
             Debug.Log("door");
 
-            SceneManager.currentScene = "Forest1";
+            if (SceneManage.previousScene == "Forest1")
+            {
+                Vector3 pos = GameObject.Find("Player").transform.position;
+                pos = new Vector3(-7.5f, -3.65f, 0);
+                GameObject.Find("Player").transform.position = pos;
+            }
+
+            SceneManage.previousScene = "Forest1";
             SceneManager.LoadScene("Market");
         }
     }
