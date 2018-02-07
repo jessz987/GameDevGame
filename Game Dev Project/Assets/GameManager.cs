@@ -12,7 +12,12 @@ public class GameManager : MonoBehaviour {
     public static int numGrapes;
 
     void Start () {
+        health = 3;
+
+        numWool = 0;
         numFlowers = 0;
+        numCatnip = 0;
+        numGrapes = 0;
 	}
 	
 	void Update () {

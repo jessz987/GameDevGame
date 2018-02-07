@@ -8,9 +8,8 @@ TagManager:
   - Catnip
   - Grapes
   - Sheep
-  - Bee
-  - Bird
   - Floor
+  - Enemy
   layers:
   - Default
   - TransparentFX

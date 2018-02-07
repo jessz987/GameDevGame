@@ -37,17 +37,13 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
          {
-            //moveDirection += Vector2.up;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            Debug.Log("jump");
         }
         
         //add interactKey and attackKey code
     }
     void FixedUpdate()
     {
-        //Vector2 position = (Vector2)transform.position + (moveDirection * speed * Time.fixedDeltaTime);
-        //rb.MovePosition(new Vector2(transform.position.x, transform.position.y) + moveDirection * speed * Time.deltaTime);
         rb.velocity = new Vector3(moveDirection.x * speed * Time.deltaTime, rb.velocity.y);
     }
     
@@ -56,35 +52,13 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Floor")
         {
             OnGround = true;
-            Debug.Log("on ground");
         }
 
-        /*
-        if (collision.gameObject.tag == "Sheep")
+        if (collision.gameObject.tag == "Enemy")
         {
-            GameManager.numWool++;
-            Debug.Log("wool");
+            GameManager.health--;
+            Debug.Log("lives left: " + GameManager.health);
         }
-
-        if (collision.gameObject.tag == "Catnip")
-        {
-            GameManager.numCatnip++;
-            Debug.Log("catnip");
-        }
-
-        if (collision.gameObject.tag == "Flower")
-        {
-            GameManager.numFlowers++;
-            Debug.Log("flower");
-        }
-
-        if (collision.gameObject.tag == "Grapes")
-        {
-            GameManager.numGrapes++;
-            Debug.Log("grapes");
-        }
-        */
-
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -92,7 +66,6 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Floor")
         {
             OnGround = false;
-            Debug.Log("not on ground");
         }
     }
 
