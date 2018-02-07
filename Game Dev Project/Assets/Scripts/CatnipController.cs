@@ -10,7 +10,7 @@ public class CatnipController : MonoBehaviour {
         {
             gameObject.SetActive(false);
             GameManager.numCatnip++;
-            Debug.Log("catnip");
+            Debug.Log(GameManager .numCatnip + " catnip");
         }
     }
 }

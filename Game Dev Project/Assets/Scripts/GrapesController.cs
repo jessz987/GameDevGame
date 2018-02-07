@@ -10,7 +10,7 @@ public class GrapesController : MonoBehaviour {
         {
             gameObject.SetActive(false);
             GameManager.numGrapes++;
-            Debug.Log("grapes");
+            Debug.Log(GameManager.numGrapes + " grapes");
         }
     }
 }

@@ -26,6 +26,6 @@ public class CameraController : MonoBehaviour
         //if (player.position.x > Xmin && player.position.x < Xmax) // && player.position.y > Ymin && player.position.y < Ymax
         //    transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, 0); 
 
-        transform.position = new Vector3(player.position.x, player.position.y, 0);
+        //transform.position = new Vector3(player.position.x, player.position.y, 0);
     }
 }

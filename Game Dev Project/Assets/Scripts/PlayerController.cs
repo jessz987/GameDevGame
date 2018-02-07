@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 
     public float speed;
     public bool OnGround = false;
-    public float jumpForce = 10f;
+    public float jumpForce = 100f;
 
     Vector2 moveDirection = Vector2.zero;
 
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
-        moveDirection *= 0.8f;
+        moveDirection *= 0.75f;
         
         if (Input.GetKey(rightKey))
         {
@@ -35,10 +35,10 @@ public class PlayerController : MonoBehaviour {
             moveDirection += Vector2.left;
         }
 
-        if (Input.GetKey(jumpKey) && OnGround)
+        if (Input.GetKeyDown(jumpKey) && OnGround)
          {
             //moveDirection += Vector2.up;
-            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             Debug.Log("jump");
         }
         
@@ -46,8 +46,9 @@ public class PlayerController : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        Vector2 position = (Vector2)transform.position + (moveDirection * speed * Time.fixedDeltaTime);
-        rb.MovePosition(position);
+        //Vector2 position = (Vector2)transform.position + (moveDirection * speed * Time.fixedDeltaTime);
+        //rb.MovePosition(new Vector2(transform.position.x, transform.position.y) + moveDirection * speed * Time.deltaTime);
+        rb.velocity = new Vector3(moveDirection.x * speed * Time.deltaTime, rb.velocity.y);
     }
     
     void OnCollisionEnter2D(Collision2D collision)

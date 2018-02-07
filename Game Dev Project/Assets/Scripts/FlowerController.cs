@@ -10,7 +10,7 @@ public class FlowerController : MonoBehaviour {
         {
             gameObject.SetActive(false);
             GameManager.numFlowers++;
-            Debug.Log("flower");
+            Debug.Log(GameManager.numFlowers + " flower");
         }
     }
 }
