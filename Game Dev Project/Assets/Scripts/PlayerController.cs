@@ -45,4 +45,32 @@ public class PlayerController : MonoBehaviour {
         Vector2 position = (Vector2)transform.position + (moveDirection * speed * Time.fixedDeltaTime);
         rb.MovePosition(position);
     }
+    /*
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Sheep")
+        {
+            GameManager.numWool++;
+            Debug.Log("wool");
+        }
+
+        if (collision.gameObject.tag == "Catnip")
+        {
+            GameManager.numCatnip++;
+            Debug.Log("catnip");
+        }
+
+        if (collision.gameObject.tag == "Flower")
+        {
+            GameManager.numFlowers++;
+            Debug.Log("flower");
+        }
+
+        if (collision.gameObject.tag == "Grapes")
+        {
+            GameManager.numGrapes++;
+            Debug.Log("grapes");
+        }
+     }
+     */
 }
