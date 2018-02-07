@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
     public KeyCode attackKey;
 
     public float speed;
+    public bool OnGround = false;
+    public float jumpForce = 10f;
 
     Vector2 moveDirection = Vector2.zero;
 
@@ -33,10 +35,12 @@ public class PlayerController : MonoBehaviour {
             moveDirection += Vector2.left;
         }
 
-        if (Input.GetKey(jumpKey))
+        if (Input.GetKey(jumpKey) && OnGround)
          {
-            moveDirection += Vector2.up;
-         }
+            //moveDirection += Vector2.up;
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+            Debug.Log("jump");
+        }
         
         //add interactKey and attackKey code
     }
@@ -45,9 +49,16 @@ public class PlayerController : MonoBehaviour {
         Vector2 position = (Vector2)transform.position + (moveDirection * speed * Time.fixedDeltaTime);
         rb.MovePosition(position);
     }
-    /*
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Floor")
+        {
+            OnGround = true;
+            Debug.Log("on ground");
+        }
+
+        /*
         if (collision.gameObject.tag == "Sheep")
         {
             GameManager.numWool++;
@@ -71,6 +82,17 @@ public class PlayerController : MonoBehaviour {
             GameManager.numGrapes++;
             Debug.Log("grapes");
         }
-     }
-     */
+        */
+
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            OnGround = false;
+            Debug.Log("not on ground");
+        }
+    }
+
 }
