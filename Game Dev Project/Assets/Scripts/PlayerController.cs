@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -10,19 +12,24 @@ public class PlayerController : MonoBehaviour {
     public KeyCode interactKey;
     public KeyCode attackKey;
 
+    public Image[] healthSpots;
+
     public float speed;
     public bool OnGround = false;
     public float jumpForce = 100f;
+    public int lives = 5;
 
     Vector2 moveDirection = Vector2.zero;
 
     Rigidbody2D rb;
 
 	void Start () {
+        GameManager.health = lives;
         rb = GetComponent<Rigidbody2D>();
 	}
 	
-	void Update () {
+	void Update ()
+    {
         moveDirection *= 0.75f;
         
         if (Input.GetKey(rightKey))
@@ -56,8 +63,73 @@ public class PlayerController : MonoBehaviour {
 
         if (collision.gameObject.tag == "Enemy")
         {
-            GameManager.health--;
-            Debug.Log("lives left: " + GameManager.health);
+            lives--;
+            GameManager.health = lives;
+            Debug.Log("lives left: " + lives);
+
+            switch (lives)
+            {
+                case 5:
+                    for (int i = 0; i < healthSpots.Length; i++)
+                    {
+                        healthSpots[i].gameObject.SetActive(true);
+                    }
+                    break;
+                case 4:
+                    for (int i = 0; i < healthSpots.Length; i++)
+                    {
+                        healthSpots[i].gameObject.SetActive(true);
+                        if (i == 4)
+                        {
+                            healthSpots[i].gameObject.SetActive(false);
+                        }
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < healthSpots.Length; i++)
+                    {
+                        healthSpots[i].gameObject.SetActive(true);
+                        if (i == 3 || i == 4)
+                        {
+                            healthSpots[i].gameObject.SetActive(false);
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < healthSpots.Length; i++)
+                    {
+                        healthSpots[i].gameObject.SetActive(true);
+                        if (i == 2 || i == 3 || i == 4)
+                        {
+                            healthSpots[i].gameObject.SetActive(false);
+                        }
+                    }
+                    break;
+                case 1:
+                    for (int i = 0; i < healthSpots.Length; i++)
+                    {
+                        healthSpots[i].gameObject.SetActive(true);
+                        if (i != 0)
+                        {
+                            healthSpots[i].gameObject.SetActive(false);
+                        }
+                    }
+                    break;
+                case 0:
+                    for (int i = 0; i < healthSpots.Length; i++)
+                    {
+                        healthSpots[i].gameObject.SetActive(false);
+                    }
+                    break;
+            }
+
+            if (lives <= 0)
+            {
+                Debug.Log("game over");
+                SceneManager.LoadScene("GameOver");
+            }
+
+            
         }
     }
 

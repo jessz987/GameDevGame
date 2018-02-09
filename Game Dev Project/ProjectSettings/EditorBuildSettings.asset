@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Market.unity
     guid: dab14acc3d705a44fab5a58bbcf919c4
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 7a2cd4de60a9f854f8793286bd63a53c

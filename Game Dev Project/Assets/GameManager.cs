@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -11,8 +12,8 @@ public class GameManager : MonoBehaviour {
     public static int numCatnip;
     public static int numGrapes;
 
-    void Start () {
-        health = 3;
+    /*void Start () {
+        health = 5;
 
         numWool = 0;
         numFlowers = 0;
@@ -21,6 +22,9 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	void Update () {
-		
-	}
+		if (health <= 0)
+        {
+            
+        }
+	}*/
 }
