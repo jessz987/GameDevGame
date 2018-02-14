@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class WoolTextController : MonoBehaviour {
 
     Text wool;
-    
-	void Start () {
+
+    void Update()
+    {
         wool = GetComponent<Text>();
-	}
-	
-	void Update () {
-		
-	}
+        wool.text = GameManager.numWool.ToString();
+    }
 }
