@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     public KeyCode attackKey;
 
     public Image[] healthSpots;
+    public GameObject weaponPrefab;
 
     public float speed;
     public bool OnGround = false;
@@ -45,6 +46,15 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(jumpKey) && OnGround)
          {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKeyDown(attackKey))
+        {
+            GameObject weapon = Instantiate(weaponPrefab);
+            Vector3 newPos = weapon.transform.position;
+            newPos.x = transform.position.x -0.6f;
+            newPos.y = transform.position.y;
+            weapon.transform.position = newPos;
         }
         
         //add interactKey and attackKey code
