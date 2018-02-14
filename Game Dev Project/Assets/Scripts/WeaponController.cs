@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour {
 
-    float timeToDeath = 0.5f;
+    float timeToDeath = 0.2f;
 
     void Update () {
         timeToDeath -= Time.deltaTime;

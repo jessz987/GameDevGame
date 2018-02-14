@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 212857082130068406}
   - component: {fileID: 114804040241801894}
   - component: {fileID: 61124132555230690}
+  - component: {fileID: 95851858228672590}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1612029239404190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.57, y: -3.54, z: 1}
+  m_LocalPosition: {x: 7.73, y: -3.51, z: 1}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4382643135492012}
@@ -96,7 +97,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -143,18 +144,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016459942, y: -0.017270446}
+  m_Offset: {x: -0.0026883483, y: -0.017801166}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.46056396, y: 0.4974667}
-    oldSize: {x: 0.25, y: 0.22}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18467951, y: 0.18001604}
+  m_Size: {x: 0.21340191, y: 0.23373508}
   m_EdgeRadius: 0
 --- !u!81 &81708334509176058
 AudioListener:
@@ -163,6 +164,23 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340209153718786}
   m_Enabled: 1
+--- !u!95 &95851858228672590
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612029239404190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114151893791433822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,16 +212,21 @@ MonoBehaviour:
   jumpKey: 119
   interactKey: 101
   attackKey: 32
+  lastKeyLeft: 0
   healthSpots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 40
+  weaponPrefab: {fileID: 1840076423387620, guid: e17ae356d3f91554680a862c1e4f3d89,
+    type: 2}
+  speed: 60
   OnGround: 0
   jumpForce: 15
   lives: 5
+  anim: {fileID: 0}
+  currentAnim: 
 --- !u!124 &124957292407052454
 Behaviour:
   m_ObjectHideFlags: 1
@@ -245,7 +268,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af6a94380ffb7ea46811a3bc17a9c3cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc09e4a825f26714286fa834342f1eb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

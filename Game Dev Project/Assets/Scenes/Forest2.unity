@@ -916,11 +916,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
-        type: 2}
-      propertyPath: healthSpots.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4752929347125838, guid: cb1f897effabfd040a47e3b389f17a0e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 7.73
@@ -955,25 +950,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
         type: 2}
-      propertyPath: jumpForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
-        type: 2}
-      propertyPath: speed
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382643135492012, guid: cb1f897effabfd040a47e3b389f17a0e, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
-        type: 2}
-      propertyPath: lives
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
-        type: 2}
       propertyPath: healthSpots.Array.data[0]
       value: 
       objectReference: {fileID: 509676616}
@@ -997,12 +973,11 @@ Prefab:
       propertyPath: healthSpots.Array.data[4]
       value: 
       objectReference: {fileID: 1775539102}
-    - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
+    - target: {fileID: 95851858228672590, guid: cb1f897effabfd040a47e3b389f17a0e,
         type: 2}
-      propertyPath: weaponPrefab
+      propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 1840076423387620, guid: e17ae356d3f91554680a862c1e4f3d89,
-        type: 2}
+      objectReference: {fileID: 9100000, guid: 59cd62533115a8046bf12028209f5388, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb1f897effabfd040a47e3b389f17a0e, type: 2}
   m_IsPrefabParent: 0
@@ -1893,12 +1868,12 @@ Prefab:
     - target: {fileID: 224681552494025664, guid: d8fb115381033a0478f76cf6b3a210fe,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 320.5
+      value: 148.5
       objectReference: {fileID: 0}
     - target: {fileID: 224681552494025664, guid: d8fb115381033a0478f76cf6b3a210fe,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 180.5
+      value: 83.5
       objectReference: {fileID: 0}
     - target: {fileID: 224681552494025664, guid: d8fb115381033a0478f76cf6b3a210fe,
         type: 2}

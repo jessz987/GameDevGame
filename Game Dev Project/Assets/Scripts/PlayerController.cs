@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
     public KeyCode interactKey;
     public KeyCode attackKey;
 
+    public bool lastKeyLeft;
+
     public Image[] healthSpots;
     public GameObject weaponPrefab;
 
@@ -22,6 +24,9 @@ public class PlayerController : MonoBehaviour {
 
     Vector2 moveDirection = Vector2.zero;
 
+    public Animator anim;
+    public string currentAnim;
+
     Rigidbody2D rb;
 
 	void Start () {
@@ -31,16 +36,22 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update ()
     {
+        anim = GetComponent<Animator>();
+        currentAnim = "Idle";
         moveDirection *= 0.75f;
         
         if (Input.GetKey(rightKey))
         {
             moveDirection += Vector2.right;
+            lastKeyLeft = false;
+            currentAnim = "moveRight";
         }
 
         if (Input.GetKey(leftKey))
         {
             moveDirection += Vector2.left;
+            lastKeyLeft = true;
+            currentAnim = "moveLeft";
         }
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
@@ -48,11 +59,20 @@ public class PlayerController : MonoBehaviour {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
+        anim.Play(currentAnim);
+
         if (Input.GetKeyDown(attackKey))
         {
             GameObject weapon = Instantiate(weaponPrefab);
             Vector3 newPos = weapon.transform.position;
-            newPos.x = transform.position.x -0.6f;
+
+            if (lastKeyLeft)
+            {
+                newPos.x = transform.position.x - 0.6f;
+            }
+            else
+                newPos.x = transform.position.x + 0.6f;
+
             newPos.y = transform.position.y;
             weapon.transform.position = newPos;
         }
