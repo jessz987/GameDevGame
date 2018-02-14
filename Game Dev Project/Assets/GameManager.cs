@@ -11,4 +11,7 @@ public class GameManager : MonoBehaviour {
     public static int numFlowers;
     public static int numCatnip;
     public static int numGrapes;
+
+    public static bool leftSpawn;
+    public static bool rightSpawn;
 }

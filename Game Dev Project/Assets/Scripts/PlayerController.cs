@@ -32,7 +32,22 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         GameManager.health = lives;
         rb = GetComponent<Rigidbody2D>();
-	}
+
+        if (GameManager.leftSpawn == true)
+        {
+            Vector3 playerpos = transform.position;
+            playerpos.x = -7.73f;
+            transform.position = playerpos;
+            Debug.Log("spawned left");
+        }
+        if (GameManager.rightSpawn == true)
+        {
+            Vector3 playerpos = transform.position;
+            playerpos.x = 7.73f;
+            transform.position = playerpos;
+            Debug.Log("spawned right");
+        }
+    }
 	
 	void Update ()
     {
@@ -89,6 +104,18 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Floor")
         {
             OnGround = true;
+        }
+
+        if (collision.gameObject.tag == "SpawnLeft")
+        {
+            GameManager.leftSpawn = true;
+            GameManager.rightSpawn = false;
+        }
+
+        if (collision.gameObject.tag == "SpawnRight")
+        {
+            GameManager.rightSpawn = true;
+            GameManager.leftSpawn = false;
         }
 
         if (collision.gameObject.tag == "Enemy")

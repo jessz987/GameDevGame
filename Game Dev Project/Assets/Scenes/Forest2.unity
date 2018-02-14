@@ -906,6 +906,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1898820760020818, guid: 1e056a841830efb47887ac189878a75f, type: 2}
+      propertyPath: m_TagString
+      value: SpawnLeft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e056a841830efb47887ac189878a75f, type: 2}
   m_IsPrefabParent: 0
@@ -1103,6 +1107,10 @@ Prefab:
         type: 2}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898820760020818, guid: 1e056a841830efb47887ac189878a75f, type: 2}
+      propertyPath: m_TagString
+      value: SpawnRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e056a841830efb47887ac189878a75f, type: 2}
