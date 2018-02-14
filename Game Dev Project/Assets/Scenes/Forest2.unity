@@ -973,11 +973,6 @@ Prefab:
       propertyPath: healthSpots.Array.data[4]
       value: 
       objectReference: {fileID: 1775539102}
-    - target: {fileID: 95851858228672590, guid: cb1f897effabfd040a47e3b389f17a0e,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 59cd62533115a8046bf12028209f5388, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb1f897effabfd040a47e3b389f17a0e, type: 2}
   m_IsPrefabParent: 0
