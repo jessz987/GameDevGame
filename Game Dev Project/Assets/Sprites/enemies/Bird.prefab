@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  patrolPositions: []
+  speed: 0
 --- !u!212 &212264678830663024
 SpriteRenderer:
   m_ObjectHideFlags: 1

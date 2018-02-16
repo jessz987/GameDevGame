@@ -5,6 +5,8 @@ using UnityEngine;
 public class BeeController : MonoBehaviour {
 
     public int health;
+    public Transform[] patrolPositions;
+    public float speed;
 
     void Start()
     {
@@ -17,6 +19,8 @@ public class BeeController : MonoBehaviour {
         {
             gameObject.SetActive(false);
         }
+
+        Patrol();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -26,5 +30,10 @@ public class BeeController : MonoBehaviour {
             health--;
             Debug.Log("bee has " + health + " health left");
         }
+    }
+
+    void Patrol()
+    {
+        transform.position = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
     }
 }
