@@ -1038,6 +1038,22 @@ Prefab:
       propertyPath: healthSpots.Array.data[4]
       value: 
       objectReference: {fileID: 1525488426}
+    - target: {fileID: 212857082130068406, guid: cb1f897effabfd040a47e3b389f17a0e,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bc09e4a825f26714286fa834342f1eb2,
+        type: 3}
+    - target: {fileID: 61124132555230690, guid: cb1f897effabfd040a47e3b389f17a0e,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0064589195
+      objectReference: {fileID: 0}
+    - target: {fileID: 61124132555230690, guid: cb1f897effabfd040a47e3b389f17a0e,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.23602533
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb1f897effabfd040a47e3b389f17a0e, type: 2}
   m_IsPrefabParent: 0

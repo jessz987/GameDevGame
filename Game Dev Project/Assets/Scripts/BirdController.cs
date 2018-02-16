@@ -5,6 +5,8 @@ using UnityEngine;
 public class BirdController : MonoBehaviour {
 
     public int health;
+    public Transform[] patrolPositions;
+    public float speed;
     
 	void Start () {
         health = 2;
@@ -15,6 +17,8 @@ public class BirdController : MonoBehaviour {
         {
             gameObject.SetActive(false);
         }
+
+        Patrol();
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -24,5 +28,10 @@ public class BirdController : MonoBehaviour {
             health--;
             Debug.Log("bird has " + health + " health left");
         }
+    }
+
+    void Patrol ()
+    {
+        transform.position = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
     }
 }
