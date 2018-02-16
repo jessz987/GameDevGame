@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 212857082130068406}
   - component: {fileID: 114804040241801894}
   - component: {fileID: 61124132555230690}
-  - component: {fileID: 95851858228672590}
+  - component: {fileID: 95626192542589578}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -144,7 +144,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0026883483, y: -0.003784895}
+  m_Offset: {x: -0.0064589195, y: -0.0014717169}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -155,7 +155,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21340191, y: 0.20570254}
+  m_Size: {x: 0.23602533, y: 0.20107618}
   m_EdgeRadius: 0
 --- !u!81 &81708334509176058
 AudioListener:
@@ -164,7 +164,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340209153718786}
   m_Enabled: 1
---- !u!95 &95851858228672590
+--- !u!95 &95626192542589578
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   OnGround: 0
   jumpForce: 14
   lives: 5
-  anim: {fileID: 95851858228672590}
+  anim: {fileID: 0}
   currentAnim: 
 --- !u!124 &124957292407052454
 Behaviour:
