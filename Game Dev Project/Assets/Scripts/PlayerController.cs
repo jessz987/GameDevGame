@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour {
         {
             Vector3 playerpos = transform.position;
             playerpos.x = -7.73f;
+            playerpos.y = -3.51f;
             transform.position = playerpos;
             Debug.Log("spawned left");
         }
@@ -44,8 +45,17 @@ public class PlayerController : MonoBehaviour {
         {
             Vector3 playerpos = transform.position;
             playerpos.x = 7.73f;
+            playerpos.y = -3.51f;
             transform.position = playerpos;
             Debug.Log("spawned right");
+        }
+        if (GameManager.rooftopSpawn == true)
+        {
+            Vector3 playerpos = transform.position;
+            playerpos.x = 2f;
+            playerpos.y = 2.4f;
+            transform.position = playerpos;
+            Debug.Log("spawned center");
         }
     }
 	
@@ -110,12 +120,14 @@ public class PlayerController : MonoBehaviour {
         {
             GameManager.leftSpawn = true;
             GameManager.rightSpawn = false;
+            GameManager.rooftopSpawn = false;
         }
 
         if (collision.gameObject.tag == "SpawnRight")
         {
             GameManager.rightSpawn = true;
             GameManager.leftSpawn = false;
+            GameManager.rooftopSpawn = false;
         }
 
         if (collision.gameObject.tag == "Enemy")
@@ -184,6 +196,9 @@ public class PlayerController : MonoBehaviour {
             {
                 Debug.Log("game over");
                 SceneManager.LoadScene("GameOver");
+                GameManager.leftSpawn = false;
+                GameManager.rightSpawn = false;
+                GameManager.rooftopSpawn = true;
             }
 
             
@@ -197,5 +212,6 @@ public class PlayerController : MonoBehaviour {
             OnGround = false;
         }
     }
+    
 
 }

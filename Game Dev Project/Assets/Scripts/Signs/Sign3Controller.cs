@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MarketLeftSignController : MonoBehaviour
+public class Sign3Controller : MonoBehaviour
 {
 
 

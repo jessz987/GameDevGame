@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Forest2RightSignController : MonoBehaviour
+public class Sign1Controller : MonoBehaviour
 {
-
     void OnCollisionEnter2D(Collision2D coll)
     {
 
@@ -13,7 +12,9 @@ public class Forest2RightSignController : MonoBehaviour
         if (p != null)
         {
             Debug.Log("door");
-            SceneManager.LoadScene("Forest1");
+
+            SceneManage.previousScene = "Rooftop";
+            SceneManager.LoadScene("Market");
         }
     }
 }

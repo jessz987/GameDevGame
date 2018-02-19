@@ -14,4 +14,5 @@ public class GameManager : MonoBehaviour {
 
     public static bool leftSpawn;
     public static bool rightSpawn;
+    public static bool rooftopSpawn;
 }

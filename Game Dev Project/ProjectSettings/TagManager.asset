@@ -15,6 +15,7 @@ TagManager:
   - SpawnLeft
   - SpawnRight
   - Wool
+  - Sign
   layers:
   - Default
   - TransparentFX

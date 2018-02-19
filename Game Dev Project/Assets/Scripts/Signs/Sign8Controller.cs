@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MarketRightSignController : MonoBehaviour {
+public class Sign8Controller : MonoBehaviour
+{
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -12,9 +13,7 @@ public class MarketRightSignController : MonoBehaviour {
         if (p != null)
         {
             Debug.Log("door");
-
-            SceneManage.previousScene = "Market";
-            SceneManager.LoadScene("Rooftop");
+            SceneManager.LoadScene("Forest2");
         }
     }
 }

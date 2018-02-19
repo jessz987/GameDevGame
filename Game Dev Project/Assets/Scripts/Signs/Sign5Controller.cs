@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Forest2LeftSignController : MonoBehaviour
+public class Sign5Controller : MonoBehaviour
 {
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -13,7 +13,7 @@ public class Forest2LeftSignController : MonoBehaviour
         if (p != null)
         {
             Debug.Log("door");
-            SceneManager.LoadScene("Forest3");
+            SceneManager.LoadScene("Forest2");
         }
     }
 }
