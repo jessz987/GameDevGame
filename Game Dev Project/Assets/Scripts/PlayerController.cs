@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public bool OnGround = false;
     public float jumpForce = 100f;
-    public int lives = 5;
+    public int lives;
 
     Vector2 moveDirection = Vector2.zero;
 

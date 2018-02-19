@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public class TutorialController : MonoBehaviour
+{
 
-public class RestartController : MonoBehaviour {
-    	
-	void Update () {
+    void Update()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene("Rooftop");
@@ -17,5 +18,5 @@ public class RestartController : MonoBehaviour {
             GameManager.numCatnip = 0;
             GameManager.numGrapes = 0;
         }
-	}
+    }
 }
