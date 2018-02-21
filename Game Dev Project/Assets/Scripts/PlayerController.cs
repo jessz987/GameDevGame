@@ -29,9 +29,12 @@ public class PlayerController : MonoBehaviour {
 
     Rigidbody2D rb;
 
+    DialogueManager dialogueManager;
+
 	void Start () {
         GameManager.health = lives;
         rb = GetComponent<Rigidbody2D>();
+        dialogueManager = GetComponent<DialogueManager>();
 
         if (GameManager.leftSpawn == true)
         {
@@ -126,6 +129,35 @@ public class PlayerController : MonoBehaviour {
         {
             lives--;
             GameManager.health = lives;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKeyDown(interactKey))
+        {
+            if (collision.gameObject.tag == "NPC")
+            {
+                if (dialogueManager.InConversation)
+                {
+                    dialogueManager.AdvanceConversation();
+                }
+                else
+                {
+                    dialogueManager.BeginConversation(collision.gameObject);
+                }
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            if (dialogueManager.InConversation)
+            {
+                dialogueManager.EndConversation();
+            }
         }
     }
 
