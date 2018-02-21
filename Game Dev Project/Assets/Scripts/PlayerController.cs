@@ -108,7 +108,16 @@ public class PlayerController : MonoBehaviour {
     {
         rb.velocity = new Vector3(moveDirection.x * speed * Time.deltaTime, rb.velocity.y);
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Stinger")
+        {
+            lives--;
+            GameManager.health = lives;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Floor")

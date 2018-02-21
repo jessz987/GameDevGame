@@ -16,6 +16,7 @@ TagManager:
   - SpawnRight
   - Wool
   - Sign
+  - Stinger
   layers:
   - Default
   - TransparentFX
