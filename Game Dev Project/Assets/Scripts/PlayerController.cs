@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
 	void Update ()
     {
         anim = GetComponent<Animator>();
-        currentAnim = "Idle";
+        currentAnim = "rightIdle";
         moveDirection *= 0.75f;
         
         if (Input.GetKey(rightKey))
@@ -71,6 +71,10 @@ public class PlayerController : MonoBehaviour {
             lastKeyLeft = false;
             currentAnim = "moveRight";
         }
+        else
+        {
+            currentAnim = "rightIdle";
+        }
 
         if (Input.GetKey(leftKey))
         {
@@ -78,6 +82,13 @@ public class PlayerController : MonoBehaviour {
             lastKeyLeft = true;
             currentAnim = "moveLeft";
         }
+        else if (lastKeyLeft)
+        {
+            currentAnim = "leftIdle";
+        }
+
+
+        
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
          {
@@ -93,10 +104,10 @@ public class PlayerController : MonoBehaviour {
 
             if (lastKeyLeft)
             {
-                newPos.x = transform.position.x - 0.6f;
+                newPos.x = transform.position.x - 0.8f;
             }
             else
-                newPos.x = transform.position.x + 0.6f;
+                newPos.x = transform.position.x + 0.8f;
 
             newPos.y = transform.position.y;
             weapon.transform.position = newPos;
