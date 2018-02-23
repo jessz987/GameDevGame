@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce = 100f;
     public int lives;
 
+    public float healthCoolDown = -1;
+    public bool invulnerable = false;
+
     Vector2 moveDirection = Vector2.zero;
 
     public Animator anim;
@@ -116,7 +119,6 @@ public class PlayerController : MonoBehaviour {
             weapon.transform.position = newPos;
         }
         
-        //add interactKey and attackKey code
     }
     void FixedUpdate()
     {
@@ -184,75 +186,99 @@ public class PlayerController : MonoBehaviour {
 
         if (collision.gameObject.tag == "Enemy")
         {
-            lives--;
-            GameManager.health = lives;
-            Debug.Log("lives left: " + lives);
-
-            switch (lives)
+            if (healthCoolDown > 0)
             {
-                case 5:
-                    for (int i = 0; i < healthSpots.Length; i++)
-                    {
-                        healthSpots[i].gameObject.SetActive(true);
-                    }
-                    break;
-                case 4:
-                    for (int i = 0; i < healthSpots.Length; i++)
-                    {
-                        healthSpots[i].gameObject.SetActive(true);
-                        if (i == 4)
-                        {
-                            healthSpots[i].gameObject.SetActive(false);
-                        }
-                    }
-                    break;
-                case 3:
-                    for (int i = 0; i < healthSpots.Length; i++)
-                    {
-                        healthSpots[i].gameObject.SetActive(true);
-                        if (i == 3 || i == 4)
-                        {
-                            healthSpots[i].gameObject.SetActive(false);
-                        }
-                    }
-                    break;
-                case 2:
-                    for (int i = 0; i < healthSpots.Length; i++)
-                    {
-                        healthSpots[i].gameObject.SetActive(true);
-                        if (i == 2 || i == 3 || i == 4)
-                        {
-                            healthSpots[i].gameObject.SetActive(false);
-                        }
-                    }
-                    break;
-                case 1:
-                    for (int i = 0; i < healthSpots.Length; i++)
-                    {
-                        healthSpots[i].gameObject.SetActive(true);
-                        if (i != 0)
-                        {
-                            healthSpots[i].gameObject.SetActive(false);
-                        }
-                    }
-                    break;
-                case 0:
-                    for (int i = 0; i < healthSpots.Length; i++)
-                    {
-                        healthSpots[i].gameObject.SetActive(false);
-                    }
-                    break;
+                invulnerable = true;
+                Debug.Log("invulnerable");
             }
 
-            if (lives <= 0)
+            healthCoolDown -= Time.deltaTime;
+
+
+            if (invulnerable == false)
             {
-                Debug.Log("game over");
-                SceneManager.LoadScene("GameOver");
-                GameManager.leftSpawn = false;
-                GameManager.rightSpawn = false;
-                GameManager.rooftopSpawn = true;
+                lives--;
+                GameManager.health = lives;
+                Debug.Log("lives left: " + lives);
+
+                switch (lives)
+                {
+                    case 5:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                        }
+                        break;
+                    case 4:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i == 4)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 3:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i == 3 || i == 4)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 2:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i == 2 || i == 3 || i == 4)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 1:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i != 0)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 0:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(false);
+                        }
+                        break;
+                }
+
+
+
+                if (lives <= 0)
+                {
+                    Debug.Log("game over");
+                    SceneManager.LoadScene("GameOver");
+                    GameManager.leftSpawn = false;
+                    GameManager.rightSpawn = false;
+                    GameManager.rooftopSpawn = true;
+                }
+
             }
 
+            if (healthCoolDown < 0)
+            {
+                Debug.Log("not invulnerable");
+                invulnerable = false;
+                healthCoolDown = 1f; 
+            }
+
+            
+                
             
         }
     }
