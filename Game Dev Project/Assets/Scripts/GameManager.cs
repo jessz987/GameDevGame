@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour {
     public static int numCatnip;
     public static int numGrapes;
 
+    public static int numWine;
+    public static int numYarn;
+    public static int numBouquet;
+
     public static bool leftSpawn;
     public static bool rightSpawn;
     public static bool rooftopSpawn;

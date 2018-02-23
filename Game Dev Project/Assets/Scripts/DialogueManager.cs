@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour {
 		currentlyTalkingTo = null;
 		dialogueOfCurrentConversation = null;
 		indexInCurrentConversation = 0;
+        ActivePanel = false;
 	}
 
 	void Update () {
@@ -66,6 +67,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	public void AdvanceConversation () {
+        ActivePanel = true;
 		// cheching to make sure we have started a conversation with someone
 		if (currentlyTalkingTo != null) {
 
