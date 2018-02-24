@@ -18,6 +18,8 @@ TagManager:
   - Sign
   - Stinger
   - NPC
+  - FlipRight
+  - FlipLeft
   layers:
   - Default
   - TransparentFX

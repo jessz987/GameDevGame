@@ -10,18 +10,18 @@ public class BeeController : MonoBehaviour {
 
     public GameObject weapon;
     public float spawnWeapon = 1.5f;
+    private float currentSpawnWeaponTimer = 0;
     public bool spawnWeaponLeft;
 
     void Start()
     {
         health = 3;
         spawnWeaponLeft = false;
+        currentSpawnWeaponTimer = spawnWeapon;
     }
 
     void Update()
     {
-        spawnWeapon -= Time.deltaTime;
-
         if (health <= 0)
         {
             gameObject.SetActive(false);
@@ -29,7 +29,9 @@ public class BeeController : MonoBehaviour {
 
         Patrol();
 
-        if (spawnWeapon <= 0)
+        currentSpawnWeaponTimer -= Time.deltaTime;
+
+        if (currentSpawnWeaponTimer <= 0)
         {
             GameObject stinger = Instantiate(weapon);
             Vector3 newPos = stinger.transform.position;
@@ -41,15 +43,14 @@ public class BeeController : MonoBehaviour {
             if (spawnWeaponLeft)
             {
                 stingerBody.velocity = new Vector2(-5, 0);
-                spawnWeaponLeft = false;
             }
 
             if (spawnWeaponLeft == false)
             {
                 stingerBody.velocity = new Vector2(5, 0);
-                spawnWeaponLeft = true;
             }
-        
+
+            currentSpawnWeaponTimer = spawnWeapon;
         }
     }
 
@@ -62,8 +63,33 @@ public class BeeController : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "FlipRight")
+        {
+            spawnWeaponLeft = false;
+            Debug.Log("flip right");
+        }
+
+        if (collision.gameObject.tag == "FlipLeft")
+        {
+            spawnWeaponLeft = true;
+            Debug.Log("flip left");
+        }
+    }
+
     void Patrol()
     {
-        transform.position = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
+        Vector3 newPos = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
+        Vector3 direction = newPos - transform.position;
+        if (Mathf.Sign(newPos.x) > 0)
+        {
+            //shootDirection = Vector2.right;
+        }
+        else
+        {
+            //shootDirection = Vector2.left;
+        }
+        transform.position = newPos;
     }
 }

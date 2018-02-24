@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -22,22 +22,23 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce = 100f;
     public int lives;
 
-    public float healthCoolDown = -1;
+    public float healthCoolDown = 5f;
+    public float currentHealthCoolDownTime = 0;
     public bool invulnerable = false;
 
     Vector2 moveDirection = Vector2.zero;
 
     public Animator anim;
-    public string currentAnim;
-
     Rigidbody2D rb;
-
+    private SpriteRenderer spriteRenderer;
     DialogueManager dialogueManager;
 
 	void Start () {
         GameManager.health = lives;
         rb = GetComponent<Rigidbody2D>();
         dialogueManager = GetComponent<DialogueManager>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
 
         if (GameManager.leftSpawn == true)
         {
@@ -64,45 +65,62 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("spawned center");
         }
     }
-	
-	void Update ()
+
+    void Update()
     {
-        anim = GetComponent<Animator>();
-        currentAnim = "rightIdle";
+        currentHealthCoolDownTime -= Time.deltaTime;
+
+        if (currentHealthCoolDownTime < 0)
+        {
+            currentHealthCoolDownTime = 0;
+            Debug.Log("not invulnerable");
+            invulnerable = false;
+        }
+
+        /*if (currentHealthCoolDownTime > 0)
+        {
+            invulnerable = true;
+            Debug.Log("invulnerable");
+        }*/
+        
+
+
         moveDirection *= 0.75f;
+
+        anim.SetBool("moving", false);
         
         if (Input.GetKey(rightKey))
         {
             moveDirection += Vector2.right;
+
             lastKeyLeft = false;
-            currentAnim = "moveRight";
+
+            anim.SetBool("moving", true);
+            spriteRenderer.flipX = false;
         }
         else
         {
-            currentAnim = "rightIdle";
+            spriteRenderer.flipX = false;
         }
 
         if (Input.GetKey(leftKey))
         {
             moveDirection += Vector2.left;
             lastKeyLeft = true;
-            currentAnim = "moveLeft";
+            anim.SetBool("moving", true);
+            spriteRenderer.flipX = true;
         }
         else if (lastKeyLeft)
         {
-            currentAnim = "leftIdle";
+            spriteRenderer.flipX = true;
         }
-
-
         
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
          {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-
-        anim.Play(currentAnim);
-
+        
         if (Input.GetKeyDown(attackKey))
         {
             GameObject weapon = Instantiate(weaponPrefab);
@@ -136,12 +154,17 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "NPC")
+        {
+            Debug.Log("in npc trigger");
+        }
         if (Input.GetKeyDown(interactKey))
         {
             if (collision.gameObject.tag == "NPC")
             {
                 if (dialogueManager.InConversation)
                 {
+                    Debug.Log("INTERACTING AT TIME: " + Time.time);
                     dialogueManager.AdvanceConversation();
                 }
                 else
@@ -156,6 +179,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "NPC")
         {
+            Debug.Log("exiting npc trigger");
             if (dialogueManager.InConversation)
             {
                 dialogueManager.EndConversation();
@@ -186,20 +210,15 @@ public class PlayerController : MonoBehaviour {
 
         if (collision.gameObject.tag == "Enemy")
         {
-            if (healthCoolDown > 0)
-            {
-                invulnerable = true;
-                Debug.Log("invulnerable");
-            }
-
-            healthCoolDown -= Time.deltaTime;
-
+            Debug.Log("touched enemy" + "Invulnerable = " + invulnerable);
 
             if (invulnerable == false)
             {
                 lives--;
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
+                invulnerable = true;
+                currentHealthCoolDownTime = healthCoolDown;
 
                 switch (lives)
                 {
@@ -257,8 +276,6 @@ public class PlayerController : MonoBehaviour {
                         break;
                 }
 
-
-
                 if (lives <= 0)
                 {
                     Debug.Log("game over");
@@ -268,18 +285,7 @@ public class PlayerController : MonoBehaviour {
                     GameManager.rooftopSpawn = true;
                 }
 
-            }
-
-            if (healthCoolDown < 0)
-            {
-                Debug.Log("not invulnerable");
-                invulnerable = false;
-                healthCoolDown = 1f; 
-            }
-
-            
-                
-            
+            }                    
         }
     }
 

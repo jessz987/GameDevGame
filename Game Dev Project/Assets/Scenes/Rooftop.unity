@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 799186048}
   - component: {fileID: 799186050}
   - component: {fileID: 799186047}
+  - component: {fileID: 799186051}
   m_Layer: 0
   m_Name: Cat
   m_TagString: NPC
@@ -534,6 +535,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7462862, y: 0.44702137}
   m_EdgeRadius: 0
+--- !u!114 &799186051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 799186046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c818973519027048a4eb9fdb82b2218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &803978134
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7672b9ac0c6d0d48a89c80e161b2e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialoguePanel: {fileID: 0}
   npcUIText: {fileID: 641857028}
   playerUIText: {fileID: 641857028}
 --- !u!114 &897050516
@@ -818,8 +831,10 @@ MonoBehaviour:
   OnGround: 0
   jumpForce: 14
   lives: 5
+  healthCoolDown: -1
+  currentHealthCoolDownTime: 0
+  invulnerable: 0
   anim: {fileID: 0}
-  currentAnim: 
 --- !u!212 &897050517
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -855,7 +870,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bc09e4a825f26714286fa834342f1eb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdd34121c890f884ca0b67187eb69e00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -894,7 +909,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 897050512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 2.4, z: 1}
+  m_LocalPosition: {x: 2.02, y: 2.35, z: 1}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 803978135}
@@ -911,12 +926,12 @@ Prefab:
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 398
+      value: 259.5
       objectReference: {fileID: 0}
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 224
+      value: 146
       objectReference: {fileID: 0}
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
