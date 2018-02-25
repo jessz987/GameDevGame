@@ -13,6 +13,8 @@ public class BeeController : MonoBehaviour {
     private float currentSpawnWeaponTimer = 0;
     public bool spawnWeaponLeft;
 
+    Vector2 shootDirection;
+
     void Start()
     {
         health = 3;
@@ -62,34 +64,22 @@ public class BeeController : MonoBehaviour {
             Debug.Log("bee has " + health + " health left");
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "FlipRight")
-        {
-            spawnWeaponLeft = false;
-            Debug.Log("flip right");
-        }
-
-        if (collision.gameObject.tag == "FlipLeft")
-        {
-            spawnWeaponLeft = true;
-            Debug.Log("flip left");
-        }
-    }
-
+    
     void Patrol()
     {
         Vector3 newPos = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
+
         Vector3 direction = newPos - transform.position;
+
         if (Mathf.Sign(newPos.x) > 0)
         {
-            //shootDirection = Vector2.right;
+            shootDirection = Vector2.right;
         }
         else
         {
-            //shootDirection = Vector2.left;
+            shootDirection = Vector2.left;
         }
+
         transform.position = newPos;
     }
 }

@@ -147,8 +147,82 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Stinger")
         {
-            lives--;
-            GameManager.health = lives;
+            Debug.Log("hit stinger");
+
+            if (invulnerable == false)
+            {
+                lives--;
+                GameManager.health = lives;
+                Debug.Log("lives left: " + lives);
+                invulnerable = true;
+                currentHealthCoolDownTime = healthCoolDown;
+
+                switch (lives)
+                {
+                    case 5:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                        }
+                        break;
+                    case 4:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i == 4)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 3:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i == 3 || i == 4)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 2:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i == 2 || i == 3 || i == 4)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 1:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(true);
+                            if (i != 0)
+                            {
+                                healthSpots[i].gameObject.SetActive(false);
+                            }
+                        }
+                        break;
+                    case 0:
+                        for (int i = 0; i < healthSpots.Length; i++)
+                        {
+                            healthSpots[i].gameObject.SetActive(false);
+                        }
+                        break;
+                }
+
+                if (lives <= 0)
+                {
+                    Debug.Log("game over");
+                    SceneManager.LoadScene("GameOver");
+                    GameManager.leftSpawn = false;
+                    GameManager.rightSpawn = false;
+                    GameManager.rooftopSpawn = true;
+                }
+
+            }
         }
     }
 

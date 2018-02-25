@@ -15,21 +15,21 @@ public class SheepController : MonoBehaviour {
         anim = GetComponent<Animator>();
         currentAnim = "SheepLeft";
         
-
         Patrol();
     }
     
     void Patrol()
     {
         transform.position = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
-        if (transform.position.x >= patrolPositions[1].position.x - 0.01f)
+        if (transform.position.x >= patrolPositions[1].position.x - 0.05f)
         {
             anim.SetBool("ToRight", false);
         }
 
-        if (transform.position.x <= patrolPositions[0].position.x + 0.01f)
+        if (transform.position.x <= patrolPositions[0].position.x + 0.05f)
         {
             anim.SetBool("ToRight", true);
         }
+        
     }
 }

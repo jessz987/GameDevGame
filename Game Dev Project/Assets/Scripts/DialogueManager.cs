@@ -69,33 +69,40 @@ public class DialogueManager : MonoBehaviour {
         DialoguePanel.SetActive(false);
     }
 
-	public void AdvanceConversation () {
-        Debug.Log("ADVANCE AT TIME: " + Time.time);
+    public void AdvanceConversation()
+    {
+        // Debug.Log("ADVANCE AT TIME: " + Time.time);
         ActivePanel = true;
-		// cheching to make sure we have started a conversation with someone
-		if (currentlyTalkingTo != null) {
+        // checking to make sure we have started a conversation with someone
+        if (currentlyTalkingTo != null)
+        {
 
-			/*
-				this assumes we read all of the npc dialogue then move to player dialogue
-				the if statement checks if we've finished reading all of the strings from the npc dialogue
-			*/
-			if (indexInCurrentConversation < dialogueOfCurrentConversation.npcDialogueSequence.Length) {
+            /*
+                this assumes we read all of the npc dialogue then move to player dialogue
+                the if statement checks if we've finished reading all of the strings from the npc dialogue
+            */
+            if (indexInCurrentConversation < dialogueOfCurrentConversation.npcDialogueSequence.Length)
+            {
                 // in npc dialogue
                 Debug.Log("in npc dialog at index: " + indexInCurrentConversation);
                 DisplayText(dialogueOfCurrentConversation.npcDialogueSequence[indexInCurrentConversation], npcUIText);
-			
-			}
-			else {
+
+            }
+            else
+            {
                 // in player dialogue
                 Debug.Log("in player dialog at index: " + indexInCurrentConversation);
-                DisplayText(dialogueOfCurrentConversation.playerDialogueSequence[indexInCurrentConversation - dialogueOfCurrentConversation.npcDialogueSequence.Length], playerUIText);
-         
-			}
+                if (indexInCurrentConversation < ((dialogueOfCurrentConversation.npcDialogueSequence.Length + dialogueOfCurrentConversation.playerDialogueSequence.Length)))
+                {
+                    DisplayText(dialogueOfCurrentConversation.playerDialogueSequence[indexInCurrentConversation - dialogueOfCurrentConversation.npcDialogueSequence.Length], playerUIText);
+                }
+            }
+
             indexInCurrentConversation++;
 
 
             // this check will auto end the conversation when you've reached the end of the strings you have for it.
-            if (indexInCurrentConversation == ((dialogueOfCurrentConversation.npcDialogueSequence.Length + dialogueOfCurrentConversation.playerDialogueSequence.Length)))
+            if (indexInCurrentConversation > ((dialogueOfCurrentConversation.npcDialogueSequence.Length + dialogueOfCurrentConversation.playerDialogueSequence.Length)))
             {
                 Debug.Log("index: " + indexInCurrentConversation);
                 Debug.Log("end conversation");
@@ -103,12 +110,13 @@ public class DialogueManager : MonoBehaviour {
             }
 
         }
-		else {
-			Debug.Log("We're not currently talking to anyone!");
-		}
-	}
+        else
+        {
+            Debug.Log("We're not currently talking to anyone!");
+        }
+    }
 
-	public void DisplayText (string line, Text uiText) {
+    public void DisplayText (string line, Text uiText) {
 		uiText.text = line;
 	}
 }

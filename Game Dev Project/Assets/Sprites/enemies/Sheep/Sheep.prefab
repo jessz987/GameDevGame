@@ -82,6 +82,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 0.3
+  anim: {fileID: 0}
+  currentAnim: 
 --- !u!212 &212430921056187432
 SpriteRenderer:
   m_ObjectHideFlags: 1
