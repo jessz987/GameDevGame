@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wool: {fileID: 1282879531487024, guid: f7dfc155cc48784478f25aa515550770, type: 2}
-  catnip: {fileID: 1887172114840628, guid: 5d2d46b3aff17bc4bbbbefda758fb4bb, type: 2}
-  flower: {fileID: 1139308818407050, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
+  catnip: {fileID: 1991499805424486, guid: 5d2d46b3aff17bc4bbbbefda758fb4bb, type: 2}
+  flower: {fileID: 1899021375826530, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
   grape: {fileID: 1224133622238966, guid: 2d404504d22673e42878ec3433c35742, type: 2}
 --- !u!1 &406920685
 GameObject:
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 406920685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709b9b549dea1d24ca6f15655387ad3c, type: 3}
+  m_Script: {fileID: 11500000, guid: c88c8086d28c1644b991f73c59262bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!102 &406920687
@@ -314,7 +314,7 @@ TextMesh:
   m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1090997540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 914e51facb54fcd40973e98d758936eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3469c656f5e19ee4dbb2f5690bab111b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!102 &1090997542
@@ -766,7 +766,7 @@ TextMesh:
   m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1396295705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ab81ed03478ef4cab2613fb0557747, type: 3}
+  m_Script: {fileID: 11500000, guid: c6e787ede99f6ab4f8c91267bf33e5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!102 &1396295707
@@ -918,7 +918,7 @@ TextMesh:
   m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -995,7 +995,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568215153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 877cdb7adf2dbd14cbde123b87306db2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5618056c5cbe66642827cce71cdce95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!102 &1568215155
@@ -1015,7 +1015,7 @@ TextMesh:
   m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
