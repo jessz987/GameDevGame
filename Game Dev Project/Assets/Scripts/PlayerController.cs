@@ -77,13 +77,6 @@ public class PlayerController : MonoBehaviour {
             invulnerable = false;
         }
 
-        /*if (currentHealthCoolDownTime > 0)
-        {
-            invulnerable = true;
-            Debug.Log("invulnerable");
-        }*/
-        
-
 
         moveDirection *= 0.75f;
 

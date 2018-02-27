@@ -41,16 +41,8 @@ public class BeeController : MonoBehaviour {
             stinger.transform.position = newPos;
 
             Rigidbody2D stingerBody = stinger.GetComponent<Rigidbody2D>();
-
-            if (spawnWeaponLeft)
-            {
-                stingerBody.velocity = new Vector2(-5, 0);
-            }
-
-            if (spawnWeaponLeft == false)
-            {
-                stingerBody.velocity = new Vector2(5, 0);
-            }
+            
+            stingerBody.velocity = shootDirection * 5f;
 
             currentSpawnWeaponTimer = spawnWeapon;
         }
@@ -70,8 +62,8 @@ public class BeeController : MonoBehaviour {
         Vector3 newPos = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
 
         Vector3 direction = newPos - transform.position;
-
-        if (Mathf.Sign(newPos.x) > 0)
+        
+        if (Mathf.Sign(direction.x) > 0)
         {
             shootDirection = Vector2.right;
         }
