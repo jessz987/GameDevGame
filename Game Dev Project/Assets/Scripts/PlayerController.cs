@@ -50,8 +50,10 @@ public class PlayerController : MonoBehaviour
         dialogueManager = GetComponent<DialogueManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        updateHealthUI();
 
         Scene scene = SceneManager.GetActiveScene();
+
         if (scene.name == "Market")
         {
             lives = 5;
