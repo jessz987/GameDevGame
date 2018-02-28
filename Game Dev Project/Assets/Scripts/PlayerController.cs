@@ -22,9 +22,13 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce = 100f;
     public int lives;
 
-    public float healthCoolDown = 5f;
+    public float healthCoolDown = 2f;
     public float currentHealthCoolDownTime = 0;
     public bool invulnerable = false;
+
+    public float weaponCoolDown = 0.5f;
+    public float currentWeaponCoolDown = 0;
+    public bool weaponCoolingDown = false;
 
     Vector2 moveDirection = Vector2.zero;
 
@@ -34,6 +38,11 @@ public class PlayerController : MonoBehaviour {
     DialogueManager dialogueManager;
 
 	void Start () {
+        if (GameManager.health != 0)
+        {
+            lives = GameManager.health;
+        }
+
         GameManager.health = lives;
         rb = GetComponent<Rigidbody2D>();
         dialogueManager = GetComponent<DialogueManager>();
@@ -69,12 +78,20 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
         currentHealthCoolDownTime -= Time.deltaTime;
+        currentWeaponCoolDown -= Time.deltaTime;
 
         if (currentHealthCoolDownTime < 0)
         {
             currentHealthCoolDownTime = 0;
             Debug.Log("not invulnerable");
             invulnerable = false;
+        }
+
+        if (currentWeaponCoolDown < 0)
+        {
+            currentWeaponCoolDown = 0;
+            Debug.Log("weapon ready");
+            weaponCoolingDown = false;
         }
 
 
@@ -114,8 +131,11 @@ public class PlayerController : MonoBehaviour {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         
-        if (Input.GetKeyDown(attackKey))
+        if (Input.GetKeyDown(attackKey) && weaponCoolingDown == false)
         {
+            weaponCoolingDown = true;
+            currentWeaponCoolDown = weaponCoolDown;
+
             GameObject weapon = Instantiate(weaponPrefab);
             Vector3 newPos = weapon.transform.position;
 
@@ -256,6 +276,11 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.name.Contains("HorMovingPlatform"))
+        {
+
+        }
+
         if (collision.gameObject.tag == "Floor")
         {
             OnGround = true;

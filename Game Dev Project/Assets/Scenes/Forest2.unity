@@ -205,8 +205,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &128593361 stripped
 MonoBehaviour:
@@ -628,13 +628,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690169486535340, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_Name
-      value: moving platform TR
+      value: HorMovingPlatform TR
       objectReference: {fileID: 0}
     - target: {fileID: 61789194183929232, guid: 218378f813882bd4ca31c460fba1c04e,
         type: 2}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: dc5ed49417381674f85bf88f32aa94df, type: 2}
+      objectReference: {fileID: 6200000, guid: bdd5d27f186f3e04c8758b229f83c76f, type: 2}
     - target: {fileID: 212301252257971868, guid: 218378f813882bd4ca31c460fba1c04e,
         type: 2}
       propertyPath: m_Color.g
@@ -978,7 +978,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4351996691368768, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.34
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 4351996691368768, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1006,7 +1006,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690169486535340, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_Name
-      value: moving platform BL
+      value: MovingPlatform BL
       objectReference: {fileID: 0}
     - target: {fileID: 212301252257971868, guid: 218378f813882bd4ca31c460fba1c04e,
         type: 2}
@@ -1073,12 +1073,12 @@ Prefab:
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 303
+      value: 268.5
       objectReference: {fileID: 0}
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 170.5
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
@@ -1478,11 +1478,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4351996691368768, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.73
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 4351996691368768, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.34
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 4351996691368768, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1510,7 +1510,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690169486535340, guid: 218378f813882bd4ca31c460fba1c04e, type: 2}
       propertyPath: m_Name
-      value: moving platform BR
+      value: MovingPlatform BR
       objectReference: {fileID: 0}
     - target: {fileID: 212301252257971868, guid: 218378f813882bd4ca31c460fba1c04e,
         type: 2}
@@ -1926,7 +1926,7 @@ Prefab:
     - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
         type: 2}
       propertyPath: healthCoolDown
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 212857082130068406, guid: cb1f897effabfd040a47e3b389f17a0e,
         type: 2}
@@ -1953,6 +1953,21 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.19105801
       objectReference: {fileID: 0}
+    - target: {fileID: 50922539746291736, guid: cb1f897effabfd040a47e3b389f17a0e,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
+        type: 2}
+      propertyPath: jumpForce
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 61124132555230690, guid: cb1f897effabfd040a47e3b389f17a0e,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: bdd5d27f186f3e04c8758b229f83c76f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb1f897effabfd040a47e3b389f17a0e, type: 2}
   m_IsPrefabParent: 0
@@ -2655,7 +2670,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1073514043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7, y: -2.4, z: 0}
+  m_LocalPosition: {x: 5.7, y: -2.8, z: 0}
   m_LocalScale: {x: 50, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2901,7 +2916,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249612153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7, y: -2.4, z: 0}
+  m_LocalPosition: {x: -5.7, y: -2.8, z: 0}
   m_LocalScale: {x: 50, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3318,8 +3333,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1001 &1639700644
 Prefab:
@@ -3576,7 +3591,7 @@ GameObject:
   - component: {fileID: 1715628158}
   - component: {fileID: 1715628160}
   m_Layer: 0
-  m_Name: moving platform TL
+  m_Name: HorMovingPlatform TL
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3591,7 +3606,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1715628154}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: dc5ed49417381674f85bf88f32aa94df, type: 2}
+  m_Material: {fileID: 6200000, guid: bdd5d27f186f3e04c8758b229f83c76f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3712,8 +3727,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1718409133 stripped
 MonoBehaviour:
@@ -3962,8 +3977,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1851850524
 GameObject:

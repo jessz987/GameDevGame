@@ -9,9 +9,11 @@ public class BirdController : MonoBehaviour {
     public float speed;
 
     public Animator anim;
+    SpriteRenderer sr;
 
     void Start () {
         health = 2;
+        sr = GetComponent<SpriteRenderer>();
     }
 	
 	void Update () {
@@ -41,12 +43,14 @@ public class BirdController : MonoBehaviour {
         {
             Debug.Log("moving left");
             anim.SetBool("moveLeft", true);
+            sr.flipX = true;
         }
 
         if (transform.position.x <= patrolPositions[0].position.x + 0.1f)
         {
             Debug.Log("moving right");
             anim.SetBool("moveLeft", false);
+            sr.flipX = false;
         }
     }
 }

@@ -14,12 +14,14 @@ public class BeeController : MonoBehaviour {
     public bool spawnWeaponLeft;
 
     Vector2 shootDirection;
+    SpriteRenderer sr;
 
     void Start()
     {
         health = 3;
         spawnWeaponLeft = false;
         currentSpawnWeaponTimer = spawnWeapon;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -66,10 +68,12 @@ public class BeeController : MonoBehaviour {
         if (Mathf.Sign(direction.x) > 0)
         {
             shootDirection = Vector2.right;
+            sr.flipX = false;
         }
         else
         {
             shootDirection = Vector2.left;
+            sr.flipX = true;
         }
 
         transform.position = newPos;
