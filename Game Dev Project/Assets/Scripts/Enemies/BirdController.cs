@@ -8,6 +8,8 @@ public class BirdController : MonoBehaviour {
     public Transform[] patrolPositions;
     public float speed;
 
+    public bool faceLeft;
+
     public Animator anim;
     SpriteRenderer sr;
 
@@ -24,6 +26,15 @@ public class BirdController : MonoBehaviour {
         }
 
         Patrol();
+
+        if (faceLeft)
+        {
+            sr.flipX = false;
+        }
+        else
+        {
+            sr.flipX = true;
+        }
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -37,20 +48,21 @@ public class BirdController : MonoBehaviour {
 
     void Patrol ()
     {
-        transform.position = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
+        Vector3 newPos = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
 
-        if (transform.position.x >= patrolPositions[1].position.x - 0.1f)
-        {
-            Debug.Log("moving left");
-            anim.SetBool("moveLeft", true);
-            sr.flipX = true;
-        }
+        Vector3 direction = newPos - transform.position;
 
-        if (transform.position.x <= patrolPositions[0].position.x + 0.1f)
+        if (Mathf.Sign(direction.x) > 0)
         {
-            Debug.Log("moving right");
             anim.SetBool("moveLeft", false);
-            sr.flipX = false;
+            faceLeft = false;
         }
+        else
+        {
+            anim.SetBool("moveLeft", true);
+            faceLeft = true;
+        }
+
+        transform.position = newPos;
     }
 }
