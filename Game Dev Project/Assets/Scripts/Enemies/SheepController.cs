@@ -10,6 +10,9 @@ public class SheepController : MonoBehaviour {
     public Animator anim;
     public string currentAnim;
 
+    public int woolLimit = 3;
+    public GameObject woolPrefab;
+
     void Update()
     {
         anim = GetComponent<Animator>();
@@ -31,5 +34,22 @@ public class SheepController : MonoBehaviour {
             anim.SetBool("ToRight", true);
         }
         
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Weapon")
+        {
+            woolLimit--;
+            if (woolLimit >= 0)
+            {
+                GameObject wool = Instantiate(woolPrefab);
+                Vector3 newPos = wool.transform.position;
+
+                newPos = transform.position;
+
+                wool.transform.position = newPos;
+            }
+        }
     }
 }

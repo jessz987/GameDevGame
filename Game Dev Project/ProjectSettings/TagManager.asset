@@ -20,6 +20,7 @@ TagManager:
   - NPC
   - FlipRight
   - FlipLeft
+  - Health
   layers:
   - Default
   - TransparentFX

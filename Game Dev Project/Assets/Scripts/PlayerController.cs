@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public KeyCode rightKey;
     public KeyCode leftKey;
@@ -37,7 +38,8 @@ public class PlayerController : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     DialogueManager dialogueManager;
 
-	void Start () {
+    void Start()
+    {
         if (GameManager.health != 0)
         {
             lives = GameManager.health;
@@ -73,6 +75,8 @@ public class PlayerController : MonoBehaviour {
             transform.position = playerpos;
             Debug.Log("spawned center");
         }
+
+
     }
 
     void Update()
@@ -98,7 +102,7 @@ public class PlayerController : MonoBehaviour {
         moveDirection *= 0.75f;
 
         anim.SetBool("moving", false);
-        
+
         if (Input.GetKey(rightKey))
         {
             moveDirection += Vector2.right;
@@ -124,13 +128,13 @@ public class PlayerController : MonoBehaviour {
         {
             spriteRenderer.flipX = true;
         }
-        
+
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
-         {
+        {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-        
+
         if (Input.GetKeyDown(attackKey) && weaponCoolingDown == false)
         {
             weaponCoolingDown = true;
@@ -149,8 +153,12 @@ public class PlayerController : MonoBehaviour {
             newPos.y = transform.position.y;
             weapon.transform.position = newPos;
         }
-        
+
+        updateHealthUI();
+
     }
+
+
     void FixedUpdate()
     {
         rb.velocity = new Vector3(moveDirection.x * speed * Time.deltaTime, rb.velocity.y);
@@ -158,6 +166,14 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (collision.gameObject.tag == "Health")
+        {
+            lives++;
+            GameManager.health = lives;
+            updateHealthUI();
+        }
+
         if (collision.gameObject.tag == "Stinger")
         {
             Debug.Log("hit stinger");
@@ -170,61 +186,7 @@ public class PlayerController : MonoBehaviour {
                 invulnerable = true;
                 currentHealthCoolDownTime = healthCoolDown;
 
-                switch (lives)
-                {
-                    case 5:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                        }
-                        break;
-                    case 4:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i == 4)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 3:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i == 3 || i == 4)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 2:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i == 2 || i == 3 || i == 4)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 1:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i != 0)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 0:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(false);
-                        }
-                        break;
-                }
+                updateHealthUI();
 
                 if (lives <= 0)
                 {
@@ -276,11 +238,6 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Contains("HorMovingPlatform"))
-        {
-
-        }
-
         if (collision.gameObject.tag == "Floor")
         {
             OnGround = true;
@@ -312,61 +269,7 @@ public class PlayerController : MonoBehaviour {
                 invulnerable = true;
                 currentHealthCoolDownTime = healthCoolDown;
 
-                switch (lives)
-                {
-                    case 5:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                        }
-                        break;
-                    case 4:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i == 4)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 3:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i == 3 || i == 4)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 2:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i == 2 || i == 3 || i == 4)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 1:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(true);
-                            if (i != 0)
-                            {
-                                healthSpots[i].gameObject.SetActive(false);
-                            }
-                        }
-                        break;
-                    case 0:
-                        for (int i = 0; i < healthSpots.Length; i++)
-                        {
-                            healthSpots[i].gameObject.SetActive(false);
-                        }
-                        break;
-                }
+                updateHealthUI();
 
                 if (lives <= 0)
                 {
@@ -377,7 +280,7 @@ public class PlayerController : MonoBehaviour {
                     GameManager.rooftopSpawn = true;
                 }
 
-            }                    
+            }
         }
     }
 
@@ -388,6 +291,64 @@ public class PlayerController : MonoBehaviour {
             OnGround = false;
         }
     }
-    
 
+    void updateHealthUI()
+    {
+        switch (lives)
+        {
+            case 5:
+                for (int i = 0; i < healthSpots.Length; i++)
+                {
+                    healthSpots[i].gameObject.SetActive(true);
+                }
+                break;
+            case 4:
+                for (int i = 0; i < healthSpots.Length; i++)
+                {
+                    healthSpots[i].gameObject.SetActive(true);
+                    if (i == 4)
+                    {
+                        healthSpots[i].gameObject.SetActive(false);
+                    }
+                }
+                break;
+            case 3:
+                for (int i = 0; i < healthSpots.Length; i++)
+                {
+                    healthSpots[i].gameObject.SetActive(true);
+                    if (i == 3 || i == 4)
+                    {
+                        healthSpots[i].gameObject.SetActive(false);
+                    }
+                }
+                break;
+            case 2:
+                for (int i = 0; i < healthSpots.Length; i++)
+                {
+                    healthSpots[i].gameObject.SetActive(true);
+                    if (i == 2 || i == 3 || i == 4)
+                    {
+                        healthSpots[i].gameObject.SetActive(false);
+                    }
+                }
+                break;
+            case 1:
+                for (int i = 0; i < healthSpots.Length; i++)
+                {
+                    healthSpots[i].gameObject.SetActive(true);
+                    if (i != 0)
+                    {
+                        healthSpots[i].gameObject.SetActive(false);
+                    }
+                }
+                break;
+            case 0:
+                for (int i = 0; i < healthSpots.Length; i++)
+                {
+                    healthSpots[i].gameObject.SetActive(false);
+                }
+                break;
+        }
+
+    }
 }
