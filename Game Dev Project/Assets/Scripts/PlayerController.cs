@@ -51,6 +51,14 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Market")
+        {
+            lives = 5;
+            GameManager.health = lives;
+            updateHealthUI();
+        }
+
         if (GameManager.leftSpawn == true)
         {
             Vector3 playerpos = transform.position;
