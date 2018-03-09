@@ -138,6 +138,7 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+        
 
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
