@@ -10,8 +10,16 @@ public class SheepController : MonoBehaviour {
     public Animator anim;
     public string currentAnim;
 
+    public bool faceLeft;
+
     public int woolLimit = 3;
     public GameObject woolPrefab;
+    SpriteRenderer sr;
+
+    void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -19,21 +27,33 @@ public class SheepController : MonoBehaviour {
         currentAnim = "SheepLeft";
         
         Patrol();
+
+        if (faceLeft)
+        {
+            sr.flipX = false;
+        }
+        else
+        {
+            sr.flipX = true;
+        }
     }
     
     void Patrol()
     {
-        transform.position = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
-        if (transform.position.x >= patrolPositions[1].position.x - 0.05f)
+        Vector3 newPos = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
+
+        Vector3 direction = newPos - transform.position;
+
+        if (Mathf.Sign(direction.x) > 0)
         {
-            anim.SetBool("ToRight", false);
+            faceLeft = true;
+        }
+        else
+        {
+            faceLeft = false;
         }
 
-        if (transform.position.x <= patrolPositions[0].position.x + 0.05f)
-        {
-            anim.SetBool("ToRight", true);
-        }
-        
+        transform.position = newPos;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

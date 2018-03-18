@@ -1,41 +1,38 @@
 fileFormatVersion: 2
-guid: 96c5836eb10ce1c4dbcab7f309017c8b
-timeCreated: 1520622037
+guid: 24d48aa51d9aa8744a53ed89a1316514
+timeCreated: 1521320876
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Sprite Sheet_0
-    21300002: Sprite Sheet_1
-    21300004: Sprite Sheet_2
-    21300006: Sprite Sheet_3
-    21300008: Sprite Sheet_4
-    21300010: Sprite Sheet_5
-    21300012: Sprite Sheet_6
-    21300014: Sprite Sheet_7
-    21300016: Sprite Sheet_8
-    21300018: Sprite Sheet_9
-    21300020: Sprite Sheet_10
-    21300022: Sprite Sheet_11
-    21300024: Sprite Sheet_12
-    21300026: Sprite Sheet_13
-    21300028: Sprite Sheet_14
-    21300030: Sprite Sheet_15
-    21300032: Sprite Sheet_16
-    21300034: Sprite Sheet_17
-    21300036: Sprite Sheet_18
-    21300038: Sprite Sheet_19
-    21300040: Sprite Sheet_20
-    21300042: Sprite Sheet_21
-    21300044: Sprite Sheet_22
-    21300046: Sprite Sheet_23
-    21300048: Sprite Sheet_24
-    21300050: Sprite Sheet_25
-    21300052: Sprite Sheet_26
-    21300054: Sprite Sheet_27
-    21300056: Sprite Sheet_28
-    21300058: Sprite Sheet_29
-    21300060: Sprite Sheet_30
-    21300062: Sprite Sheet_31
+    21300000: bird1
+    21300002: bird2
+    21300004: bird3
+    21300006: bee
+    21300008: heart
+    21300010: roofSign
+    21300012: forest1Sign
+    21300014: forest2Sign
+    21300016: forest3Sign
+    21300018: player1
+    21300020: flowerNPC
+    21300022: sheep1
+    21300024: playerIdle
+    21300026: flower
+    21300028: catnip
+    21300030: player2
+    21300032: bouquet
+    21300034: cat
+    21300036: yarn
+    21300038: platform
+    21300040: floor
+    21300042: marketSign
+    21300044: sheep2
+    21300046: wine
+    21300048: grapes
+    21300050: large platform
+    21300052: med platform
+    21300054: small platform
+    21300056: tiny platform
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -122,40 +119,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite Sheet_0
+      name: bird1
       rect:
         serializedVersion: 2
-        x: 11
-        y: 984
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 984
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 977
-        width: 26
+        x: 24
+        y: 945
+        width: 36
         height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -164,25 +133,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_3
+      name: bird2
       rect:
         serializedVersion: 2
-        x: 155
-        y: 972
-        width: 36
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 972
+        x: 66
+        y: 949
         width: 36
         height: 24
       alignment: 0
@@ -192,151 +147,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 968
-        width: 36
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 954
-        width: 31
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 954
-        width: 31
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 956
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 956
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 932
-        width: 36
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 936
-        width: 36
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 933
-        width: 36
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 926
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 926
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_15
+      name: bird3
       rect:
         serializedVersion: 2
         x: 108
-        y: 924
+        y: 946
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bee
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 954
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heart
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 951
         width: 19
         height: 16
       alignment: 0
@@ -346,39 +189,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_16
+      name: roofSign
       rect:
         serializedVersion: 2
-        x: 17
-        y: 852
-        width: 70
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 852
-        width: 70
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 824
+        x: 274
+        y: 918
         width: 24
         height: 72
       alignment: 0
@@ -388,25 +203,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_19
+      name: forest1Sign
       rect:
         serializedVersion: 2
-        x: 368
-        y: 820
-        width: 32
-        height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 243
-        y: 824
+        x: 307
+        y: 918
         width: 24
         height: 72
       alignment: 0
@@ -416,27 +217,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_21
+      name: forest2Sign
       rect:
         serializedVersion: 2
-        x: 329
-        y: 818
-        width: 30
-        height: 78
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 295
-        y: 824
+        x: 340
+        y: 918
         width: 24
-        height: 72
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,13 +231,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_23
+      name: forest3Sign
       rect:
         serializedVersion: 2
-        x: 17
-        y: 788
-        width: 70
-        height: 51
+        x: 373
+        y: 918
+        width: 24
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,13 +245,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_24
+      name: player1
       rect:
         serializedVersion: 2
-        x: 108
-        y: 788
-        width: 70
-        height: 51
+        x: 459
+        y: 964
+        width: 31
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,53 +259,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_25
+      name: flowerNPC
       rect:
         serializedVersion: 2
-        x: 22
-        y: 745
-        width: 9
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_26
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 744
-        width: 9
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_27
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 745
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Sprite Sheet_28
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 689
+        x: 529
+        y: 910
         width: 31
         height: 70
       alignment: 0
@@ -528,13 +273,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_29
+      name: sheep1
       rect:
         serializedVersion: 2
-        x: 23
-        y: 714
-        width: 7
-        height: 22
+        x: 24
+        y: 866
+        width: 70
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,11 +287,95 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_30
+      name: playerIdle
       rect:
         serializedVersion: 2
-        x: 41
-        y: 720
+        x: 459
+        y: 931
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flower
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 898
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catnip
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 897
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player2
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 901
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bouquet
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 870
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 879
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yarn
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 873
         width: 12
         height: 9
       alignment: 0
@@ -556,15 +385,127 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sprite Sheet_31
+      name: floor
       rect:
         serializedVersion: 2
-        x: 61
-        y: 717
-        width: 19
-        height: 14
+        x: 24
+        y: 522
+        width: 776
+        height: 201
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 62, y: 0, z: 75, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: marketSign
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 918
+        width: 24
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheep2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 802
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wine
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 867
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: grapes
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 898
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: large platform
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 740
+        width: 298
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: med platform
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 741
+        width: 195
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: small platform
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 741
+        width: 138
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiny platform
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 740
+        width: 82
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
