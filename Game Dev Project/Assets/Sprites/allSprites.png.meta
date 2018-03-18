@@ -16,7 +16,7 @@ TextureImporter:
     21300018: player1
     21300020: flowerNPC
     21300022: sheep1
-    21300024: playerIdle
+    21300024: playerIdle1
     21300026: flower
     21300028: catnip
     21300030: player2
@@ -33,6 +33,8 @@ TextureImporter:
     21300052: med platform
     21300054: small platform
     21300056: tiny platform
+    21300058: playerIdle2
+    21300060: buildings
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -287,7 +289,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerIdle
+      name: playerIdle1
       rect:
         serializedVersion: 2
         x: 459
@@ -463,7 +465,7 @@ TextureImporter:
         width: 298
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -477,7 +479,7 @@ TextureImporter:
         width: 195
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -491,7 +493,7 @@ TextureImporter:
         width: 138
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -504,6 +506,34 @@ TextureImporter:
         y: 740
         width: 82
         height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playerIdle2
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 863
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buildings
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 61
+        width: 596
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
