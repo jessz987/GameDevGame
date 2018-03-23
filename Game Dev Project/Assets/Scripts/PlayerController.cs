@@ -38,6 +38,12 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     DialogueManager dialogueManager;
 
+    public AudioSource ASplayer;
+    public AudioClip attackSound;
+    public AudioClip jumpSound;
+    public AudioClip damageTakenSound;
+    public AudioClip healthSound;
+
     void Start()
     {
         if (GameManager.health != 0)
@@ -143,6 +149,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
         {
+            ASplayer.PlayOneShot(jumpSound);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
@@ -153,6 +160,8 @@ public class PlayerController : MonoBehaviour
 
             GameObject weapon = Instantiate(weaponPrefab);
             Vector3 newPos = weapon.transform.position;
+            
+            ASplayer.PlayOneShot(attackSound);
 
             if (lastKeyLeft)
             {
@@ -182,6 +191,7 @@ public class PlayerController : MonoBehaviour
         {
             lives++;
             GameManager.health = lives;
+            ASplayer.PlayOneShot(healthSound);
             updateHealthUI();
         }
 
@@ -192,6 +202,7 @@ public class PlayerController : MonoBehaviour
             if (invulnerable == false)
             {
                 lives--;
+                ASplayer.PlayOneShot(damageTakenSound);
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
                 invulnerable = true;
@@ -275,6 +286,7 @@ public class PlayerController : MonoBehaviour
             if (invulnerable == false)
             {
                 lives--;
+                ASplayer.PlayOneShot(damageTakenSound);
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
                 invulnerable = true;
