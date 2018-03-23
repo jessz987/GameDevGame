@@ -35,6 +35,7 @@ TextureImporter:
     21300056: tiny platform
     21300058: playerIdle2
     21300060: buildings
+    21300062: wool
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -534,6 +535,20 @@ TextureImporter:
         y: 61
         width: 596
         height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wool
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 899
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
