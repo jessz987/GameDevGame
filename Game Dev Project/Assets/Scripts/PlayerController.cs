@@ -158,6 +158,8 @@ public class PlayerController : MonoBehaviour
             weaponCoolingDown = true;
             currentWeaponCoolDown = weaponCoolDown;
 
+            anim.SetBool("attacking", true);
+
             GameObject weapon = Instantiate(weaponPrefab);
             Vector3 newPos = weapon.transform.position;
             
@@ -173,6 +175,8 @@ public class PlayerController : MonoBehaviour
             newPos.y = transform.position.y;
             weapon.transform.position = newPos;
         }
+
+        anim.SetBool("attacking", false);
 
         updateHealthUI();
 

@@ -14,7 +14,7 @@ TextureImporter:
     21300014: forest2Sign
     21300016: forest3Sign
     21300018: player1
-    21300020: flowerNPC
+    21300020: npc2
     21300022: sheep1
     21300024: playerIdle1
     21300026: flower
@@ -36,6 +36,11 @@ TextureImporter:
     21300058: playerIdle2
     21300060: buildings
     21300062: wool
+    21300064: sun
+    21300066: npc1
+    21300068: npc3
+    21300070: stinger
+    21300072: allSprites_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -248,21 +253,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: player1
-      rect:
-        serializedVersion: 2
-        x: 459
-        y: 964
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: flowerNPC
+      name: npc2
       rect:
         serializedVersion: 2
         x: 529
@@ -283,20 +274,6 @@ TextureImporter:
         y: 866
         width: 70
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerIdle1
-      rect:
-        serializedVersion: 2
-        x: 459
-        y: 931
-        width: 31
-        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,20 +302,6 @@ TextureImporter:
         y: 897
         width: 9
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: player2
-      rect:
-        serializedVersion: 2
-        x: 459
-        y: 901
-        width: 31
-        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,27 +477,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerIdle2
-      rect:
-        serializedVersion: 2
-        x: 459
-        y: 863
-        width: 31
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: buildings
       rect:
         serializedVersion: 2
-        x: 96
-        y: 61
+        x: 8
+        y: 10
         width: 596
-        height: 260
+        height: 268
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,6 +498,76 @@ TextureImporter:
         y: 899
         width: 13
         height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sun
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 799
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 910
+        width: 21
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc3
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 908
+        width: 35
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: stinger
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 935
+        width: 4
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: allSprites_0
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 277
+        width: 370
+        height: 186
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
