@@ -1071,7 +1071,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   ASplayer: {fileID: 222465947}
-  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
+  hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
 --- !u!61 &222465946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   ASplayer: {fileID: 425435929}
-  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
+  hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
 --- !u!61 &425435928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4635,7 +4635,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   ASplayer: {fileID: 1663287145}
-  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
+  hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
 --- !u!61 &1663287144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4995,7 +4995,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   ASplayer: {fileID: 1771065269}
-  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
+  hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
 --- !u!61 &1771065268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5508,7 +5508,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   ASplayer: {fileID: 2078729095}
-  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
+  hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
 --- !u!61 &2078729094
 BoxCollider2D:
   m_ObjectHideFlags: 0

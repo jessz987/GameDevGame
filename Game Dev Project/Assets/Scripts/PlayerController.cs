@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
         moveDirection *= 0.75f;
 
         anim.SetBool("moving", false);
-        anim.SetBool("attacking", false);
+        
 
         if (Input.GetKey(rightKey))
         {
@@ -160,6 +160,7 @@ public class PlayerController : MonoBehaviour
             currentWeaponCoolDown = weaponCoolDown;
 
             anim.SetBool("attacking", true);
+            anim.SetBool("moving", false);
 
             GameObject weapon = Instantiate(weaponPrefab);
             Vector3 newPos = weapon.transform.position;
