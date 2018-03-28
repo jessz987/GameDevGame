@@ -13,6 +13,9 @@ public class BirdController : MonoBehaviour {
     public Animator anim;
     SpriteRenderer sr;
 
+    public AudioSource ASplayer;
+    public AudioClip hitSound;
+
     void Start () {
         health = 2;
         sr = GetComponent<SpriteRenderer>();
@@ -41,6 +44,7 @@ public class BirdController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Weapon")
         {
+            ASplayer.PlayOneShot(hitSound);
             health--;
             Debug.Log("bird has " + health + " health left");
         }

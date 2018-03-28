@@ -543,7 +543,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.59
+      value: 10.98
       objectReference: {fileID: 0}
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_LocalPosition.y
@@ -586,7 +586,8 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 18.59286
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 212570060738090516, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &340489209
@@ -949,6 +950,16 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114092799802031718, guid: a807572b73d2683409fd1a57532b45eb,
+        type: 2}
+      propertyPath: ASplayer
+      value: 
+      objectReference: {fileID: 624764731}
+    - target: {fileID: 114092799802031718, guid: a807572b73d2683409fd1a57532b45eb,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a807572b73d2683409fd1a57532b45eb, type: 2}
   m_IsPrefabParent: 0
@@ -965,6 +976,7 @@ GameObject:
   - component: {fileID: 624764728}
   - component: {fileID: 624764727}
   - component: {fileID: 624764726}
+  - component: {fileID: 624764731}
   m_Layer: 0
   m_Name: sheep red
   m_TagString: Sheep
@@ -1010,6 +1022,8 @@ MonoBehaviour:
   faceLeft: 0
   woolLimit: 3
   woolPrefab: {fileID: 1282879531487024, guid: f7dfc155cc48784478f25aa515550770, type: 2}
+  ASplayer: {fileID: 624764731}
+  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
 --- !u!61 &624764728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1095,6 +1109,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &624764731
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624764725}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &673732165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1461,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.61
+      value: -10.15
       objectReference: {fileID: 0}
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1406,7 +1500,8 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: dc5ed49417381674f85bf88f32aa94df, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 212570060738090516, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1208885866
@@ -1423,6 +1518,7 @@ GameObject:
   - component: {fileID: 1208885868}
   - component: {fileID: 1208885867}
   - component: {fileID: 1208885869}
+  - component: {fileID: 1208885873}
   m_Layer: 0
   m_Name: sheep yellow
   m_TagString: Sheep
@@ -1476,6 +1572,8 @@ MonoBehaviour:
   faceLeft: 0
   woolLimit: 3
   woolPrefab: {fileID: 1282879531487024, guid: f7dfc155cc48784478f25aa515550770, type: 2}
+  ASplayer: {fileID: 1208885873}
+  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
 --- !u!95 &1208885869
 Animator:
   serializedVersion: 3
@@ -1578,6 +1676,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1208885873
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1208885866}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &1301657766
 Prefab:
   m_ObjectHideFlags: 0
@@ -1869,7 +2047,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18345165, y: -0.7088461}
+  m_Offset: {x: -0.1109066, y: -0.7088461}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1880,7 +2058,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5167103, y: 0.38669443}
+  m_Size: {x: 0.6618004, y: 0.38669443}
   m_EdgeRadius: 0
 --- !u!1001 &1488629339
 Prefab:
@@ -1956,7 +2134,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23175526, y: -0.6668614}
+  m_Offset: {x: -0.07161522, y: -0.6668614}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2247,6 +2425,16 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114092799802031718, guid: a807572b73d2683409fd1a57532b45eb,
+        type: 2}
+      propertyPath: ASplayer
+      value: 
+      objectReference: {fileID: 1698771361}
+    - target: {fileID: 114092799802031718, guid: a807572b73d2683409fd1a57532b45eb,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: a807572b73d2683409fd1a57532b45eb, type: 2}
@@ -2265,6 +2453,7 @@ GameObject:
   - component: {fileID: 1698771356}
   - component: {fileID: 1698771355}
   - component: {fileID: 1698771357}
+  - component: {fileID: 1698771361}
   m_Layer: 0
   m_Name: sheep green
   m_TagString: Sheep
@@ -2318,6 +2507,8 @@ MonoBehaviour:
   faceLeft: 0
   woolLimit: 3
   woolPrefab: {fileID: 1282879531487024, guid: f7dfc155cc48784478f25aa515550770, type: 2}
+  ASplayer: {fileID: 1698771361}
+  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
 --- !u!95 &1698771357
 Animator:
   serializedVersion: 3
@@ -2420,6 +2611,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1698771361
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698771354}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &1706650347
 Prefab:
   m_ObjectHideFlags: 0
@@ -2619,6 +2890,7 @@ GameObject:
   - component: {fileID: 1921986006}
   - component: {fileID: 1921986009}
   - component: {fileID: 1921986010}
+  - component: {fileID: 1921986011}
   m_Layer: 0
   m_Name: sheep blue
   m_TagString: Sheep
@@ -2730,6 +3002,8 @@ MonoBehaviour:
   faceLeft: 0
   woolLimit: 3
   woolPrefab: {fileID: 1282879531487024, guid: f7dfc155cc48784478f25aa515550770, type: 2}
+  ASplayer: {fileID: 1921986011}
+  hitSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
 --- !u!95 &1921986010
 Animator:
   serializedVersion: 3
@@ -2747,6 +3021,86 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!82 &1921986011
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921986005}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &1943130265
 Prefab:
   m_ObjectHideFlags: 0
@@ -3210,6 +3564,16 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114092799802031718, guid: a807572b73d2683409fd1a57532b45eb,
+        type: 2}
+      propertyPath: ASplayer
+      value: 
+      objectReference: {fileID: 1208885873}
+    - target: {fileID: 114092799802031718, guid: a807572b73d2683409fd1a57532b45eb,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: a807572b73d2683409fd1a57532b45eb, type: 2}

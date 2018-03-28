@@ -491,7 +491,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.506
+      value: -10.32
       objectReference: {fileID: 0}
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_LocalPosition.y
@@ -525,7 +525,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 212570060738090516, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &625965414
@@ -795,7 +796,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 212570060738090516, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &746674980

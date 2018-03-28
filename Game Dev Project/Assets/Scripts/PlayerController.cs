@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour
         moveDirection *= 0.75f;
 
         anim.SetBool("moving", false);
+        anim.SetBool("attacking", false);
 
         if (Input.GetKey(rightKey))
         {
@@ -176,7 +177,6 @@ public class PlayerController : MonoBehaviour
             weapon.transform.position = newPos;
         }
 
-        anim.SetBool("attacking", false);
 
         updateHealthUI();
 
