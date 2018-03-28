@@ -150,6 +150,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
         {
+            ASplayer.pitch = (Random.Range(0.8f, 1.0f));
             ASplayer.PlayOneShot(jumpSound);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
@@ -159,12 +160,13 @@ public class PlayerController : MonoBehaviour
             weaponCoolingDown = true;
             currentWeaponCoolDown = weaponCoolDown;
 
-            anim.SetBool("attacking", true);
+            anim.SetTrigger("attacking");
             anim.SetBool("moving", false);
 
             GameObject weapon = Instantiate(weaponPrefab);
             Vector3 newPos = weapon.transform.position;
-            
+
+            ASplayer.pitch = (Random.Range(0.8f, 1.0f));
             ASplayer.PlayOneShot(attackSound);
 
             if (lastKeyLeft)
@@ -196,6 +198,7 @@ public class PlayerController : MonoBehaviour
         {
             lives++;
             GameManager.health = lives;
+            ASplayer.pitch = (Random.Range(0.8f, 1.0f));
             ASplayer.PlayOneShot(healthSound);
             updateHealthUI();
         }
@@ -207,6 +210,7 @@ public class PlayerController : MonoBehaviour
             if (invulnerable == false)
             {
                 lives--;
+                ASplayer.pitch = (Random.Range(0.8f, 1.0f));
                 ASplayer.PlayOneShot(damageTakenSound);
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
@@ -291,6 +295,7 @@ public class PlayerController : MonoBehaviour
             if (invulnerable == false)
             {
                 lives--;
+                ASplayer.pitch = (Random.Range(0.8f, 1.0f));
                 ASplayer.PlayOneShot(damageTakenSound);
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
