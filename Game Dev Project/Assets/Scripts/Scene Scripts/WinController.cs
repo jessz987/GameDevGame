@@ -28,7 +28,7 @@ public class WinController : MonoBehaviour {
 
 
     void Update () {
-		for (int i = 0; i <= numberWool; i++)
+		for (int i = 0; i < numberWool; i++)
         {
             Debug.Log("spawn wool: " + numberWool);
             GameObject spawnWool = Instantiate(wool);
@@ -37,7 +37,7 @@ public class WinController : MonoBehaviour {
             newPos.y = 3.5f;
             spawnWool.transform.position = newPos;
         }
-        for (int i = 0; i <= numberCatnip; i++)
+        for (int i = 0; i < numberCatnip; i++)
         {
             Debug.Log("spawn catnip: " + numberCatnip);
             GameObject spawnCatnip = Instantiate(catnip);
@@ -46,7 +46,7 @@ public class WinController : MonoBehaviour {
             newPos.y = 3.5f;
             spawnCatnip.transform.position = newPos;
         }
-        for (int i = 0; i <= numberFlower; i++)
+        for (int i = 0; i < numberFlower; i++)
         {
             Debug.Log("spawn flowers: " + numberFlower);
             GameObject spawnFlowers = Instantiate(flower);
@@ -55,7 +55,7 @@ public class WinController : MonoBehaviour {
             newPos.y = 3.5f;
             spawnFlowers.transform.position = newPos;
         }
-        for (int i = 0; i <= numberGrape; i++)
+        for (int i = 0; i < numberGrape; i++)
         {
             Debug.Log("spawn grapes: " + numberGrape);
             GameObject spawnGrapes = Instantiate(grape);

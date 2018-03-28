@@ -538,9 +538,9 @@ MonoBehaviour:
   weaponCoolingDown: 0
   anim: {fileID: 676271540}
   ASplayer: {fileID: 676271546}
-  attackSound: {fileID: 8300000, guid: 26e3c7a09d35ad941850f7b4df2da381, type: 3}
+  attackSound: {fileID: 8300000, guid: 61f77065e92629040a4d935071beb963, type: 3}
   jumpSound: {fileID: 8300000, guid: f2e5f2e950f62a34bb29dd30b24c7d9b, type: 3}
-  damageTakenSound: {fileID: 8300000, guid: 0a26616938f245a44a0cd6af9127d38b, type: 3}
+  damageTakenSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
   healthSound: {fileID: 8300000, guid: 977feee0caff90b409a6a8d87f7cfb24, type: 3}
 --- !u!212 &676271543
 SpriteRenderer:

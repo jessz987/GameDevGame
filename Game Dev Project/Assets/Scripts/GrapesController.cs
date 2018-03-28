@@ -9,9 +9,9 @@ public class GrapesController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        ASplayer.PlayOneShot(pickUpSound);
         if (coll.gameObject.tag == "Player")
         {
-            ASplayer.PlayOneShot(pickUpSound);
             gameObject.SetActive(false);
             GameManager.numGrapes++;
             Debug.Log(GameManager.numGrapes + " grapes");
