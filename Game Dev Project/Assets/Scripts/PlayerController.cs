@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode attackKey;
 
     public bool lastKeyLeft;
+    GameObject npc;
 
     public Image[] healthSpots;
     public GameObject weaponPrefab;
@@ -113,7 +114,30 @@ public class PlayerController : MonoBehaviour
             weaponCoolingDown = false;
         }
 
-
+        if (npc != null)
+        {
+            if (Input.GetKeyDown(interactKey))
+            {
+      
+                    if (dialogueManager.InConversation)
+                    {
+                        //                   Debug.Log("INTERACTING AT TIME: " + Time.time);
+                        dialogueManager.AdvanceConversation();
+                    }
+                    else
+                    {
+                        dialogueManager.BeginConversation(npc);
+                    }
+                
+            }
+        }
+        else
+        {
+            if (dialogueManager.InConversation)
+            {
+                dialogueManager.EndConversation();
+            }
+        }
         moveDirection *= 0.75f;
 
         anim.SetBool("moving", false);
@@ -233,22 +257,9 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "NPC")
         {
             Debug.Log("in npc trigger");
+            npc = collision.gameObject;
         }
-        if (Input.GetKeyDown(interactKey))
-        {
-            if (collision.gameObject.tag == "NPC")
-            {
-                if (dialogueManager.InConversation)
-                {
- //                   Debug.Log("INTERACTING AT TIME: " + Time.time);
-                    dialogueManager.AdvanceConversation();
-                }
-                else
-                {
-                    dialogueManager.BeginConversation(collision.gameObject);
-                }
-            }
-        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -256,10 +267,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "NPC")
         {
             Debug.Log("exiting npc trigger. in conversation? " + dialogueManager.InConversation);
-            if (dialogueManager.InConversation)
-            {
-                dialogueManager.EndConversation();
-            }
+            npc = null;
+           
         }
     }
 

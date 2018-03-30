@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 50922539746291736}
   - component: {fileID: 212857082130068406}
   - component: {fileID: 114804040241801894}
-  - component: {fileID: 114194586638683114}
   - component: {fileID: 61124132555230690}
   - component: {fileID: 95626192542589578}
+  - component: {fileID: 114852816726933424}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -71,8 +71,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1612029239404190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.69, y: -3.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.68, y: -3.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.1222112}
   m_Children:
   - {fileID: 4382643135492012}
   m_Father: {fileID: 0}
@@ -131,8 +131,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61124132555230690
 BoxCollider2D:
@@ -146,18 +146,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00846523, y: -0.053706884}
+  m_Offset: {x: 0.0017504692, y: -0.08918297}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.8, y: 0.8}
-    newSize: {x: 0.775, y: 0.725}
+    newSize: {x: 0.31, y: 0.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.59420645, y: 0.48463678}
+  m_Size: {x: 0.6017742, y: 0.43301654}
   m_EdgeRadius: 0
 --- !u!81 &81708334509176058
 AudioListener:
@@ -196,22 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Xmax: 0
   Xmin: 0
-  offset: {x: 0, y: 2, z: 0}
+  offset: {x: 0, y: 3, z: 0}
   player: {fileID: 4752929347125838}
---- !u!114 &114194586638683114
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1612029239404190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7672b9ac0c6d0d48a89c80e161b2e07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialoguePanel: {fileID: 0}
-  npcUIText: {fileID: 0}
-  playerUIText: {fileID: 0}
 --- !u!114 &114804040241801894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,9 +225,9 @@ MonoBehaviour:
     type: 2}
   speed: 60
   OnGround: 0
-  jumpForce: 13
+  jumpForce: 15
   lives: 5
-  healthCoolDown: -1
+  healthCoolDown: 1
   currentHealthCoolDownTime: 0
   invulnerable: 0
   weaponCoolDown: 0.5
@@ -252,6 +238,20 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: f2e5f2e950f62a34bb29dd30b24c7d9b, type: 3}
   damageTakenSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
   healthSound: {fileID: 8300000, guid: 977feee0caff90b409a6a8d87f7cfb24, type: 3}
+--- !u!114 &114852816726933424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612029239404190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7672b9ac0c6d0d48a89c80e161b2e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialoguePanel: {fileID: 0}
+  npcUIText: {fileID: 0}
+  playerUIText: {fileID: 0}
 --- !u!124 &124957292407052454
 Behaviour:
   m_ObjectHideFlags: 1
@@ -298,7 +298,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.775, y: 0.725}
+  m_Size: {x: 0.31, y: 0.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

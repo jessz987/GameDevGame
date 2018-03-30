@@ -92,7 +92,7 @@ public class DialogueManager : MonoBehaviour {
             {
                 // in player dialogue
                 Debug.Log("in player dialog at index: " + indexInCurrentConversation);
-                if (indexInCurrentConversation < ((dialogueOfCurrentConversation.npcDialogueSequence.Length + dialogueOfCurrentConversation.playerDialogueSequence.Length)))
+                if (indexInCurrentConversation < ((dialogueOfCurrentConversation.npcDialogueSequence.Length - 1 + dialogueOfCurrentConversation.playerDialogueSequence.Length)))
                 {
                     DisplayText(dialogueOfCurrentConversation.playerDialogueSequence[indexInCurrentConversation - dialogueOfCurrentConversation.npcDialogueSequence.Length], playerUIText);
                 }
