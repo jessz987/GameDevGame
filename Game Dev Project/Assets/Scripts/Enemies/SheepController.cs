@@ -15,8 +15,7 @@ public class SheepController : MonoBehaviour {
     public int woolLimit = 3;
     public GameObject woolPrefab;
     SpriteRenderer sr;
-
-    public AudioSource ASplayer;
+    
     public AudioClip hitSound;
 
     void Start()
@@ -63,7 +62,7 @@ public class SheepController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Weapon")
         {
-            ASplayer.PlayOneShot(hitSound);
+            Sound.me.PlaySoundJitter(hitSound, 1f, 0.2f, 1.3f, 0.5f);
             woolLimit--;
             if (woolLimit >= 0)
             {

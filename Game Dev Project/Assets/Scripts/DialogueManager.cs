@@ -57,7 +57,7 @@ public class DialogueManager : MonoBehaviour {
 		dialogueOfCurrentConversation = npc.GetComponent<NPCDialogueHolder>();
 		indexInCurrentConversation = 0;
 
-        //AdvanceConversation();
+        AdvanceConversation();
 	}
 
 	public void EndConversation () {

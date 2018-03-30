@@ -37,8 +37,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     DialogueManager dialogueManager;
-
-    public AudioSource ASplayer;
+    
     public AudioClip attackSound;
     public AudioClip jumpSound;
     public AudioClip damageTakenSound;
@@ -150,8 +149,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(jumpKey) && OnGround)
         {
-            ASplayer.pitch = (Random.Range(0.8f, 1.0f));
-            ASplayer.PlayOneShot(jumpSound);
+            Debug.Log("jump");
+            Sound.me.PlaySoundJitter(jumpSound, 1f, 0.2f, 1.3f, 0.5f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
@@ -165,9 +164,8 @@ public class PlayerController : MonoBehaviour
 
             GameObject weapon = Instantiate(weaponPrefab);
             Vector3 newPos = weapon.transform.position;
-
-            ASplayer.pitch = (Random.Range(0.8f, 1.0f));
-            ASplayer.PlayOneShot(attackSound);
+            
+            Sound.me.PlaySoundJitter(attackSound, 1f, 0.2f, 1.3f, 0.5f);
 
             if (lastKeyLeft)
             {
@@ -198,8 +196,7 @@ public class PlayerController : MonoBehaviour
         {
             lives++;
             GameManager.health = lives;
-            ASplayer.pitch = (Random.Range(0.8f, 1.0f));
-            ASplayer.PlayOneShot(healthSound);
+            Sound.me.PlaySoundJitter(healthSound, 1f, 0.2f, 1.3f, 0.5f);
             updateHealthUI();
         }
 
@@ -210,8 +207,7 @@ public class PlayerController : MonoBehaviour
             if (invulnerable == false)
             {
                 lives--;
-                ASplayer.pitch = (Random.Range(0.8f, 1.0f));
-                ASplayer.PlayOneShot(damageTakenSound);
+                Sound.me.PlaySoundJitter(damageTakenSound, 1f, 0.2f, 1.3f, 0.5f);
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
                 invulnerable = true;
@@ -244,7 +240,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (dialogueManager.InConversation)
                 {
-                    Debug.Log("INTERACTING AT TIME: " + Time.time);
+ //                   Debug.Log("INTERACTING AT TIME: " + Time.time);
                     dialogueManager.AdvanceConversation();
                 }
                 else
@@ -259,11 +255,20 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "NPC")
         {
-            Debug.Log("exiting npc trigger");
+            Debug.Log("exiting npc trigger. in conversation? " + dialogueManager.InConversation);
             if (dialogueManager.InConversation)
             {
                 dialogueManager.EndConversation();
             }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            OnGround = true;
+            //Debug.Log("can jump");
         }
     }
 
@@ -272,6 +277,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
         {
             OnGround = true;
+            Debug.Log("can jump");
         }
 
         if (collision.gameObject.tag == "SpawnLeft")
@@ -295,8 +301,7 @@ public class PlayerController : MonoBehaviour
             if (invulnerable == false)
             {
                 lives--;
-                ASplayer.pitch = (Random.Range(0.8f, 1.0f));
-                ASplayer.PlayOneShot(damageTakenSound);
+                Sound.me.PlaySoundJitter(damageTakenSound, 1f, 0.2f, 1.3f, 0.5f);
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
                 invulnerable = true;
@@ -322,6 +327,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
         {
             OnGround = false;
+
+            Debug.Log("can't jump");
         }
     }
 

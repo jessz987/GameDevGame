@@ -41,10 +41,9 @@ GameObject:
   - component: {fileID: 50922539746291736}
   - component: {fileID: 212857082130068406}
   - component: {fileID: 114804040241801894}
+  - component: {fileID: 114194586638683114}
   - component: {fileID: 61124132555230690}
   - component: {fileID: 95626192542589578}
-  - component: {fileID: 114542448830441860}
-  - component: {fileID: 82937210291219800}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -72,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1612029239404190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.75, y: -3.57, z: 0}
+  m_LocalPosition: {x: -7.69, y: -3.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4382643135492012}
@@ -132,8 +131,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &61124132555230690
 BoxCollider2D:
@@ -147,18 +146,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.025817394, y: -0.11380994}
+  m_Offset: {x: 0.00846523, y: -0.053706884}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.8, y: 0.8}
-    newSize: {x: 0.31, y: 0.29}
+    newSize: {x: 0.775, y: 0.725}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.46787262, y: 0.41925836}
+  m_Size: {x: 0.59420645, y: 0.48463678}
   m_EdgeRadius: 0
 --- !u!81 &81708334509176058
 AudioListener:
@@ -167,86 +166,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340209153718786}
   m_Enabled: 1
---- !u!82 &82937210291219800
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1612029239404190}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!95 &95626192542589578
 Animator:
   serializedVersion: 3
@@ -279,7 +198,7 @@ MonoBehaviour:
   Xmin: 0
   offset: {x: 0, y: 2, z: 0}
   player: {fileID: 4752929347125838}
---- !u!114 &114542448830441860
+--- !u!114 &114194586638683114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -320,16 +239,15 @@ MonoBehaviour:
     type: 2}
   speed: 60
   OnGround: 0
-  jumpForce: 15
+  jumpForce: 13
   lives: 5
-  healthCoolDown: 1
+  healthCoolDown: -1
   currentHealthCoolDownTime: 0
   invulnerable: 0
   weaponCoolDown: 0.5
   currentWeaponCoolDown: 0
   weaponCoolingDown: 0
   anim: {fileID: 95626192542589578}
-  ASplayer: {fileID: 82937210291219800}
   attackSound: {fileID: 8300000, guid: 61f77065e92629040a4d935071beb963, type: 3}
   jumpSound: {fileID: 8300000, guid: f2e5f2e950f62a34bb29dd30b24c7d9b, type: 3}
   damageTakenSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
@@ -380,7 +298,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.31, y: 0.29}
+  m_Size: {x: 0.775, y: 0.725}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
