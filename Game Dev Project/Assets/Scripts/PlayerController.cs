@@ -174,6 +174,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(jumpKey) && OnGround)
         {
             Debug.Log("jump");
+            anim.SetTrigger("jumping");
+            anim.SetBool("moving", false);
+
             Sound.me.PlaySoundJitter(jumpSound, 1f, 0.2f, 1.3f, 0.5f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
@@ -216,7 +219,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "Health")
+        if (collision.gameObject.tag == "Health" && GameManager.health < 5)
         {
             lives++;
             GameManager.health = lives;
