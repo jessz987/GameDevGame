@@ -289,6 +289,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Floor")
         {
+            anim.SetTrigger("landing");
             OnGround = true;
             Debug.Log("can jump");
         }
@@ -315,7 +316,7 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetTrigger("hurt");
                 lives--;
-                Sound.me.PlaySoundJitter(damageTakenSound, 1f, 0.2f, 1.3f, 0.5f);
+                Sound.me.PlaySoundJitter(damageTakenSound, 1f, 0.2f, 1.4f, 0.4f);
                 GameManager.health = lives;
                 Debug.Log("lives left: " + lives);
                 invulnerable = true;

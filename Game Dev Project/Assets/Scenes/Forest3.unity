@@ -381,6 +381,11 @@ Prefab:
       propertyPath: anim
       value: 
       objectReference: {fileID: 222465949}
+    - target: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 317dca50eeb76ec43b2dec1164c9e822, type: 2}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
     - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
@@ -834,6 +839,11 @@ Prefab:
       propertyPath: anim
       value: 
       objectReference: {fileID: 222465949}
+    - target: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 317dca50eeb76ec43b2dec1164c9e822, type: 2}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
     - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
@@ -1050,6 +1060,11 @@ Prefab:
       propertyPath: anim
       value: 
       objectReference: {fileID: 222465949}
+    - target: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 317dca50eeb76ec43b2dec1164c9e822, type: 2}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
     - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
@@ -1423,6 +1438,11 @@ Prefab:
       propertyPath: anim
       value: 
       objectReference: {fileID: 222465949}
+    - target: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 317dca50eeb76ec43b2dec1164c9e822, type: 2}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
     - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
@@ -1923,6 +1943,16 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: dc5ed49417381674f85bf88f32aa94df, type: 2}
+    - target: {fileID: 61003444797320762, guid: 4a882b29e35f4494987d6087e3789e21,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.09865323
+      objectReference: {fileID: 0}
+    - target: {fileID: 61003444797320762, guid: 4a882b29e35f4494987d6087e3789e21,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.50839585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a882b29e35f4494987d6087e3789e21, type: 2}
   m_IsPrefabParent: 0
@@ -3165,7 +3195,7 @@ MonoBehaviour:
   anim: {fileID: 1325262153}
   attackSound: {fileID: 8300000, guid: 61f77065e92629040a4d935071beb963, type: 3}
   jumpSound: {fileID: 8300000, guid: f2e5f2e950f62a34bb29dd30b24c7d9b, type: 3}
-  damageTakenSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+  damageTakenSound: {fileID: 8300000, guid: 673e7e1a5f763774480d28e88205ebae, type: 3}
   healthSound: {fileID: 8300000, guid: 977feee0caff90b409a6a8d87f7cfb24, type: 3}
 --- !u!212 &1325262156
 SpriteRenderer:
@@ -4102,6 +4132,11 @@ Prefab:
       propertyPath: anim
       value: 
       objectReference: {fileID: 222465949}
+    - target: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 317dca50eeb76ec43b2dec1164c9e822, type: 2}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
     - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
