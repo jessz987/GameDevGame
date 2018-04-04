@@ -43,6 +43,7 @@ public class BirdController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Weapon")
         {
+            anim.SetTrigger("hurt");
             Sound.me.PlaySoundJitter(hitSound, 1f, 0.2f, 1.3f, 0.5f);
             health--;
             Debug.Log("bird has " + health + " health left");
@@ -57,12 +58,10 @@ public class BirdController : MonoBehaviour {
 
         if (Mathf.Sign(direction.x) > 0)
         {
-            anim.SetBool("moveLeft", false);
             faceLeft = false;
         }
         else
         {
-            anim.SetBool("moveLeft", true);
             faceLeft = true;
         }
 

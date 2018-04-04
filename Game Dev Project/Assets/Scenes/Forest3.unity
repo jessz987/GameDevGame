@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1513118475081596, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_Name
@@ -313,7 +313,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4753513293083800, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1231921306340712, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_TagString
@@ -376,8 +376,14 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 222465949}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
+    - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &55716261
@@ -764,7 +770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4753513293083800, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1231921306340712, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_Name
@@ -823,8 +829,14 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 222465949}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
+    - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &222465944 stripped
@@ -852,6 +864,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+  anim: {fileID: 222465949}
 --- !u!61 &222465946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -877,6 +890,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.38}
   m_EdgeRadius: 0
+--- !u!95 &222465949 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 222465943}
 --- !u!1 &311590591
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +986,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4753513293083800, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1231921306340712, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_Name
@@ -1027,8 +1045,14 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 222465949}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
+    - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &371699860
@@ -1143,6 +1167,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+  anim: {fileID: 222465949}
 --- !u!61 &425435928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1393,8 +1418,14 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 222465949}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
+    - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &594710626
@@ -2027,7 +2058,7 @@ Prefab:
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224467947882666550, guid: 4a2efd2c8c010c942a43b862d65fdf73,
         type: 2}
@@ -2196,7 +2227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4253959330941670, guid: c10c6ee030314c0428b09e86b30132ce, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 61197960263854490, guid: c10c6ee030314c0428b09e86b30132ce,
         type: 2}
@@ -2288,7 +2319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1155911646
 BoxCollider2D:
@@ -2906,7 +2937,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1309050891
 BoxCollider2D:
@@ -3892,7 +3923,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1594030974
 BoxCollider2D:
@@ -3944,6 +3975,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+  anim: {fileID: 222465949}
 --- !u!61 &1663287144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4006,7 +4038,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4753513293083800, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1231921306340712, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
       propertyPath: m_Name
@@ -4065,8 +4097,14 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 222465949}
     m_RemovedComponents:
     - {fileID: 61879457850267414, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
+    - {fileID: 114091628767371448, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e10505d0b0a4c644c80bbffec210cc7e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1703032550
@@ -4228,6 +4266,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+  anim: {fileID: 222465949}
 --- !u!61 &1771065268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4583,6 +4622,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+  anim: {fileID: 222465949}
 --- !u!61 &2078729094
 BoxCollider2D:
   m_ObjectHideFlags: 0

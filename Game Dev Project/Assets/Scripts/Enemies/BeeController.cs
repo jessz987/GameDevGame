@@ -15,8 +15,9 @@ public class BeeController : MonoBehaviour {
 
     Vector2 shootDirection;
     SpriteRenderer sr;
-    
+
     public AudioClip hitSound;
+    public Animator anim;
 
     void Start()
     {
@@ -56,6 +57,7 @@ public class BeeController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Weapon")
         {
+            anim.SetTrigger("hurt");
             Sound.me.PlaySoundJitter(hitSound, 1f, 0.2f, 1.3f, 0.5f);
             health--;
             Debug.Log("bee has " + health + " health left");

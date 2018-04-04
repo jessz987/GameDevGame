@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4753513293083800}
   - component: {fileID: 212039520792683322}
   - component: {fileID: 61879457850267414}
+  - component: {fileID: 114091628767371448}
+  - component: {fileID: 95252354764911750}
   m_Layer: 0
   m_Name: Bee
   m_TagString: Bee
@@ -66,6 +68,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!95 &95252354764911750
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231921306340712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114091628767371448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231921306340712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb5299cc5ac2ac4aa27ce124629d8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  patrolPositions: []
+  speed: 0
+  weapon: {fileID: 0}
+  spawnWeapon: 1.5
+  spawnWeaponLeft: 0
+  hitSound: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!212 &212039520792683322
 SpriteRenderer:
   m_ObjectHideFlags: 1

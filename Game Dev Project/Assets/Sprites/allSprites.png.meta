@@ -41,6 +41,9 @@ TextureImporter:
     21300068: npc3
     21300070: stinger
     21300072: allSprites_0
+    21300074: playerHurt
+    21300076: birdHurt
+    21300078: beeHurt
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -568,6 +571,48 @@ TextureImporter:
         y: 277
         width: 370
         height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playerHurt
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 812
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: birdHurt
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 811
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beeHurt
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 976
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

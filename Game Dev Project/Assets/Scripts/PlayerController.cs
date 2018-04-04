@@ -233,6 +233,7 @@ public class PlayerController : MonoBehaviour
 
             if (invulnerable == false)
             {
+                anim.SetTrigger("hurt");
                 lives--;
                 Sound.me.PlaySoundJitter(damageTakenSound, 1f, 0.2f, 1.3f, 0.5f);
                 GameManager.health = lives;
@@ -312,6 +313,7 @@ public class PlayerController : MonoBehaviour
 
             if (invulnerable == false)
             {
+                anim.SetTrigger("hurt");
                 lives--;
                 Sound.me.PlaySoundJitter(damageTakenSound, 1f, 0.2f, 1.3f, 0.5f);
                 GameManager.health = lives;
