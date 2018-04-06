@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class WinGrapeController : MonoBehaviour {
 
-    Text numGrapes;
+    TextMesh numGrapes;
     int totalGrapes;
 
-    private void Start()
+    void Start()
     {
         totalGrapes = GameManager.numGrapes + GameManager.numWine * 15;
     }
 
     void Update()
     {
-        numGrapes = GetComponent<Text>();
+        numGrapes = GetComponent<TextMesh>();
         numGrapes.text = totalGrapes.ToString();
     }
 }

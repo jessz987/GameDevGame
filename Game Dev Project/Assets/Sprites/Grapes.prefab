@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61894555353754460}
   - component: {fileID: 114697205411017396}
   - component: {fileID: 82910826892438502}
+  - component: {fileID: 50262621055003218}
   m_Layer: 0
   m_Name: Grapes
   m_TagString: Grapes
@@ -43,6 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50262621055003218
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224133622238966}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61894555353754460
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -159,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca4acc8e56cff14ba9ad0b667d5a4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ASplayer: {fileID: 82910826892438502}
   pickUpSound: {fileID: 8300000, guid: a999b23532d50414dbfc9305a09d98e3, type: 3}
 --- !u!212 &212361042374326296
 SpriteRenderer:

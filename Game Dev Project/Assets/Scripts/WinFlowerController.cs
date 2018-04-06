@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class WinFlowerController : MonoBehaviour {
 
-    Text numFlowers;
+    TextMesh numFlowers;
     int totalFlowers;
 
-    private void Start()
+    void Start()
     {
         totalFlowers = GameManager.numFlowers + GameManager.numBouquet * 20;
     }
 
     void Update()
     {
-        numFlowers = GetComponent<Text>();
+        numFlowers = GetComponent<TextMesh>();
         numFlowers.text = totalFlowers.ToString();
     }
 }

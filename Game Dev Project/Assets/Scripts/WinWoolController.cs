@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class WinWoolController : MonoBehaviour {
 
-    Text numWool;
+    TextMesh numWool;
     int totalWool;
 
-    private void Start()
+    void Start()
     {
         totalWool = GameManager.numWool + GameManager.numYarn * 10;
     }
 
     void Update()
     {
-        numWool = GetComponent<Text>();
+        numWool = GetComponent<TextMesh>();
         numWool.text = totalWool.ToString();
     }
 }

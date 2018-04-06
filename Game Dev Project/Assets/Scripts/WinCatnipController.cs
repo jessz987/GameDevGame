@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class WinCatnipController : MonoBehaviour {
 
-    Text numCatnip;
+    TextMesh numCatnip;
     int totalCatnip;
 
-    private void Start()
+    void Start()
     {
         totalCatnip = GameManager.numCatnip + GameManager.numWine * 15;
     }
 
     void Update()
     {
-        numCatnip = GetComponent<Text>();
+        numCatnip = GetComponent<TextMesh>();
         numCatnip.text = totalCatnip.ToString();
     }
 }
