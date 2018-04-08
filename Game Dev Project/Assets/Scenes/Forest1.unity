@@ -1541,7 +1541,7 @@ MonoBehaviour:
   faceLeft: 0
   woolLimit: 3
   woolPrefab: {fileID: 1282879531487024, guid: f7dfc155cc48784478f25aa515550770, type: 2}
-  hitSound: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+  hitSound: {fileID: 8300000, guid: afefccf24e02150499d35f9ebb5c7ca6, type: 3}
 --- !u!95 &1208885869
 Animator:
   serializedVersion: 3
@@ -3481,7 +3481,7 @@ Prefab:
         type: 2}
       propertyPath: hitSound
       value: 
-      objectReference: {fileID: 8300000, guid: d642e19c8b29d6141a26d130c68094bc, type: 3}
+      objectReference: {fileID: 8300000, guid: afefccf24e02150499d35f9ebb5c7ca6, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: a807572b73d2683409fd1a57532b45eb, type: 2}

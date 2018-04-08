@@ -503,7 +503,7 @@ Prefab:
     - target: {fileID: 114804040241801894, guid: cb1f897effabfd040a47e3b389f17a0e,
         type: 2}
       propertyPath: interactKey
-      value: 55
+      value: 108
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb1f897effabfd040a47e3b389f17a0e, type: 2}
