@@ -247,7 +247,7 @@ ParticleSystem:
   m_GameObject: {fileID: 144178435}
   serializedVersion: 5
   lengthInSec: 1
-  simulationSpeed: 1
+  simulationSpeed: 0.8
   stopAction: 0
   looping: 0
   prewarm: 0
@@ -299,7 +299,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -439455831
+  randomSeed: -1039962292
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3607,7 +3607,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 144178435}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.072615884, y: 0.39687955, z: 0.8547156}
+  m_LocalPosition: {x: -2.01, y: 3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3912,7 +3912,7 @@ ParticleSystem:
   m_GameObject: {fileID: 403036949}
   serializedVersion: 5
   lengthInSec: 1
-  simulationSpeed: 1
+  simulationSpeed: 0.8
   stopAction: 0
   looping: 0
   prewarm: 0
@@ -3964,7 +3964,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1785737773
+  randomSeed: 1086636430
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4408,7 +4408,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 25
+    angle: 18.6
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -7271,12 +7271,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403036949}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.09, y: 3.34, z: 0.8547156}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 6.09, y: 3.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406920685
 GameObject:
@@ -11069,7 +11069,7 @@ ParticleSystem:
   m_GameObject: {fileID: 804122192}
   serializedVersion: 5
   lengthInSec: 1
-  simulationSpeed: 1
+  simulationSpeed: 0.8
   stopAction: 0
   looping: 0
   prewarm: 0
@@ -11121,7 +11121,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1717505682
+  randomSeed: 1805167842
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11565,7 +11565,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 25
+    angle: 20.6
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -14429,7 +14429,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 804122192}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.072615884, y: 0.39687955, z: 0.8547156}
+  m_LocalPosition: {x: 2, y: 3.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15357,7 +15357,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2046586854}
   serializedVersion: 5
   lengthInSec: 1
-  simulationSpeed: 1
+  simulationSpeed: 0.8
   stopAction: 0
   looping: 0
   prewarm: 0
@@ -15409,7 +15409,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -613765388
+  randomSeed: 1687425456
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -15853,7 +15853,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 25
+    angle: 20.35
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -18717,11 +18717,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2046586854}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -6.01, y: 3.38, z: 0.8547156}
+  m_LocalPosition: {x: -6.01, y: 3.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2141878132
 Prefab:
