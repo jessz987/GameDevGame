@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip damageTakenSound;
     public AudioClip healthSound;
+    public AudioClip footStepSound;
 
     void Start()
     {
@@ -405,5 +406,10 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
+    }
+
+    public void TriggerFootStepSound ()
+    {
+        Sound.me.PlaySoundJitter(footStepSound, 1f, 0.2f, 1.3f, 0.1f);
     }
 }

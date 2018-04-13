@@ -336,6 +336,7 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 2e45b623b6a1e114f8af43c955291309, type: 3}
   damageTakenSound: {fileID: 8300000, guid: 4e5db412c33c0e64ebce5c7a7a3a1257, type: 3}
   healthSound: {fileID: 8300000, guid: 977feee0caff90b409a6a8d87f7cfb24, type: 3}
+  footStepSound: {fileID: 8300000, guid: d89968bcc4b54754b97f573447adf342, type: 3}
 --- !u!212 &32761421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2030,31 +2031,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224528785326471482, guid: 4a2efd2c8c010c942a43b862d65fdf73,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 224419270939200390, guid: 4a2efd2c8c010c942a43b862d65fdf73,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 224035743113157362, guid: 4a2efd2c8c010c942a43b862d65fdf73,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 224242907985986410, guid: 4a2efd2c8c010c942a43b862d65fdf73,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 95
-      objectReference: {fileID: 0}
-    - target: {fileID: 224785776213759182, guid: 4a2efd2c8c010c942a43b862d65fdf73,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a2efd2c8c010c942a43b862d65fdf73, type: 2}
