@@ -1,17 +1,11 @@
 fileFormatVersion: 2
-guid: 956514f9833c12b44b9eec25d7487d6e
-timeCreated: 1521827120
+guid: d3755f8be3bd72e4fbccfe10285317c9
+timeCreated: 1523644986
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playerAnimation_0
-    21300002: playerAnimation_1
-    21300004: playerAnimation_2
-    21300006: playerAnimation_3
-    21300008: playerAnimation_4
-    21300010: playerAnimation_5
-    21300012: playerAnimation_6
-    21300014: playerAnimation_7
+    21300000: playerStillAnimation_0
+    21300002: playerStillAnimation_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -98,63 +92,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerAnimation_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerAnimation_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerAnimation_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerAnimation_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerAnimation_4
+      name: playerStillAnimation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -168,38 +106,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAnimation_5
+      name: playerStillAnimation_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerAnimation_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: playerAnimation_7
-      rect:
-        serializedVersion: 2
-        x: 96
         y: 0
         width: 32
         height: 32

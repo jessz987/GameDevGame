@@ -3351,6 +3351,7 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 2e45b623b6a1e114f8af43c955291309, type: 3}
   damageTakenSound: {fileID: 8300000, guid: 4e5db412c33c0e64ebce5c7a7a3a1257, type: 3}
   healthSound: {fileID: 8300000, guid: 977feee0caff90b409a6a8d87f7cfb24, type: 3}
+  footStepSound: {fileID: 8300000, guid: d89968bcc4b54754b97f573447adf342, type: 3}
 --- !u!212 &1454580485
 SpriteRenderer:
   m_ObjectHideFlags: 0
