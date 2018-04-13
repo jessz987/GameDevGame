@@ -1,31 +1,37 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
     public float Xmax;
     public float Xmin;
-    //public float Ymax;
-    //public float Ymin;
 
     public Vector3 offset;
-
     public Transform player;
 
+    public float lerpSpeed;
+
     private void Start()
-    {
-        Xmin = -3f;
-        Xmax = 3f;
-        //Ymin = -1.1f;
-        //Ymax = 1.5f;
-           
+    {      
     }
 
     void Update()
     {
-        //if (player.position.x > Xmin && player.position.x < Xmax) // && player.position.y > Ymin && player.position.y < Ymax
-        //    transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, 0); 
+        Vector3 target = player.transform.position + offset;
+        float camXExtent = Camera.main.orthographicSize * Camera.main.aspect;
 
-        //transform.position = new Vector3(player.position.x, player.position.y, 0);
+        Debug.Log("camXExtent: " + camXExtent + ". target: " + target);
+
+        if (target.x + camXExtent > Xmax + camXExtent)
+        {
+            Debug.Log("constraining max x");
+            target.x = Xmax;
+        }
+
+        if (target.x - camXExtent < Xmin - camXExtent)
+        {
+            target.x = Xmin;
+        }
+
+        transform.position += (target - transform.position) * lerpSpeed;
     }
 }

@@ -3788,9 +3788,9 @@ MonoBehaviour:
   flower: {fileID: 1899021375826530, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
   grape: {fileID: 1224133622238966, guid: 2d404504d22673e42878ec3433c35742, type: 2}
   woolParticle: {fileID: 2046586856}
-  catnipParticle: {fileID: 0}
-  flowerParticle: {fileID: 0}
-  grapeParticle: {fileID: 0}
+  catnipParticle: {fileID: 144178437}
+  flowerParticle: {fileID: 403036951}
+  grapeParticle: {fileID: 804122194}
 --- !u!1001 &382205857
 Prefab:
   m_ObjectHideFlags: 0
@@ -3964,7 +3964,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1086636430
+  randomSeed: 888956459
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7386,7 +7386,7 @@ GameObject:
   - component: {fileID: 527828819}
   - component: {fileID: 527828818}
   m_Layer: 0
-  m_Name: Hearts
+  m_Name: heartsParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7902,7 +7902,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 100
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -7950,7 +7950,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 25
+    angle: 34.15
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -8066,7 +8066,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10814,7 +10814,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 527828817}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.05, y: -1.6, z: 0.3125}
+  m_LocalPosition: {x: -0.05, y: -0.35, z: 0.3125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
