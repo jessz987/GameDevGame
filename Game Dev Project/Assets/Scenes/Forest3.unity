@@ -1183,7 +1183,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: afefccf24e02150499d35f9ebb5c7ca6, type: 3}
-  anim: {fileID: 222465949}
+  anim: {fileID: 425435929}
 --- !u!61 &425435928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1209,6 +1209,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.38}
   m_EdgeRadius: 0
+--- !u!95 &425435929 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1670600414}
 --- !u!1001 &498883214
 Prefab:
   m_ObjectHideFlags: 0
@@ -4006,7 +4011,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: afefccf24e02150499d35f9ebb5c7ca6, type: 3}
-  anim: {fileID: 222465949}
+  anim: {fileID: 1663287145}
 --- !u!61 &1663287144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4032,6 +4037,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.38}
   m_EdgeRadius: 0
+--- !u!95 &1663287145 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 560562058}
 --- !u!1001 &1670600414
 Prefab:
   m_ObjectHideFlags: 0
@@ -4302,7 +4312,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: afefccf24e02150499d35f9ebb5c7ca6, type: 3}
-  anim: {fileID: 222465949}
+  anim: {fileID: 1771065269}
 --- !u!61 &1771065268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4328,6 +4338,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.38}
   m_EdgeRadius: 0
+--- !u!95 &1771065269 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 28172881}
 --- !u!1 &1922785335
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,7 +4673,7 @@ MonoBehaviour:
   spawnWeapon: 2
   spawnWeaponLeft: 0
   hitSound: {fileID: 8300000, guid: afefccf24e02150499d35f9ebb5c7ca6, type: 3}
-  anim: {fileID: 222465949}
+  anim: {fileID: 2078729095}
 --- !u!61 &2078729094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4684,6 +4699,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.38}
   m_EdgeRadius: 0
+--- !u!95 &2078729095 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95252354764911750, guid: e10505d0b0a4c644c80bbffec210cc7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 333584820}
 --- !u!1 &2083680707
 GameObject:
   m_ObjectHideFlags: 0
