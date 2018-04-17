@@ -372,7 +372,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -113711552
+  randomSeed: 80986651
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2720,10 +2720,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
@@ -2778,7 +2778,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3975,6 +3975,16 @@ Prefab:
     - target: {fileID: 4024339976176840, guid: 48cf037807317f44bae616b82d7fd9b3, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61954286663896792, guid: 48cf037807317f44bae616b82d7fd9b3,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.27018404
+      objectReference: {fileID: 0}
+    - target: {fileID: 61954286663896792, guid: 48cf037807317f44bae616b82d7fd9b3,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 4.4846315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48cf037807317f44bae616b82d7fd9b3, type: 2}
@@ -6458,10 +6468,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
@@ -6516,7 +6526,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -13615,10 +13625,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
@@ -13673,7 +13683,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -15370,6 +15380,26 @@ Prefab:
     - target: {fileID: 4251548307078198, guid: 0710d4dc371e4004c95887e4744674e8, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 61889532264374762, guid: 0710d4dc371e4004c95887e4744674e8,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.06955513
+      objectReference: {fileID: 0}
+    - target: {fileID: 61889532264374762, guid: 0710d4dc371e4004c95887e4744674e8,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.4643801
+      objectReference: {fileID: 0}
+    - target: {fileID: 61889532264374762, guid: 0710d4dc371e4004c95887e4744674e8,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.06845665
+      objectReference: {fileID: 0}
+    - target: {fileID: 61889532264374762, guid: 0710d4dc371e4004c95887e4744674e8,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 4.0754232
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0710d4dc371e4004c95887e4744674e8, type: 2}
@@ -18414,10 +18444,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
@@ -18472,7 +18502,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
