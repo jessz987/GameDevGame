@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class TutorialController : MonoBehaviour
 {
+    public KeyCode start;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(start))
         {
             SceneManager.LoadScene("Rooftop");
 

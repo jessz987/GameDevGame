@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour {
 
+    public KeyCode start;
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(start))
         {
             SceneManager.LoadScene("Tutorial");
 

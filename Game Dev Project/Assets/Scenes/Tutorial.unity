@@ -211,7 +211,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45020097}
-  m_Text: click to continue...
+  m_Text: press space to continue...
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -266,7 +266,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45020097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.65, y: -3.5, z: 0}
+  m_LocalPosition: {x: 2.31, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55396c3b2957d284b97f3cecaa2ce67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: 32
 --- !u!1001 &48339795
 Prefab:
   m_ObjectHideFlags: 0
@@ -1420,11 +1421,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4464981625384274, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.170776
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: 4464981625384274, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.07841
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 4464981625384274, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2395,6 +2396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671710464}
   - component: {fileID: 1671710463}
+  - component: {fileID: 1671710465}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -2459,6 +2461,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1671710465
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1671710462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db44b6895d6cf02469ec92988f7de93f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1680444685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,6 +2621,16 @@ Prefab:
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61227050684277814, guid: 799b6883f2bcf5942bba0e74e0ce439f,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 61227050684277814, guid: 799b6883f2bcf5942bba0e74e0ce439f,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
   m_IsPrefabParent: 0
@@ -2660,7 +2689,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4464981625384274, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.6308117
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 4464981625384274, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2965,6 +2994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063279636}
   - component: {fileID: 2063279635}
+  - component: {fileID: 2063279637}
   m_Layer: 0
   m_Name: catlove
   m_TagString: Untagged
@@ -3029,6 +3059,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2063279637
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063279634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c0778fb8b0dce646a027c1b9ac5404e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &2069197869
 Prefab:
   m_ObjectHideFlags: 0
@@ -3102,6 +3149,16 @@ Prefab:
         type: 2}
       propertyPath: m_Color.g
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61227050684277814, guid: 799b6883f2bcf5942bba0e74e0ce439f,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 61227050684277814, guid: 799b6883f2bcf5942bba0e74e0ce439f,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 799b6883f2bcf5942bba0e74e0ce439f, type: 2}

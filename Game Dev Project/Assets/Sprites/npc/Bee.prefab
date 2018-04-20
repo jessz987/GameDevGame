@@ -77,7 +77,7 @@ Animator:
   m_GameObject: {fileID: 1231921306340712}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 317dca50eeb76ec43b2dec1164c9e822, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -99,11 +99,11 @@ MonoBehaviour:
   health: 0
   patrolPositions: []
   speed: 0
-  weapon: {fileID: 0}
+  weapon: {fileID: 1700100302646634, guid: b0608ae8796b20c4ebbea6868629fa00, type: 2}
   spawnWeapon: 1.5
   spawnWeaponLeft: 0
-  hitSound: {fileID: 0}
-  anim: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: afefccf24e02150499d35f9ebb5c7ca6, type: 3}
+  anim: {fileID: 95252354764911750}
 --- !u!212 &212039520792683322
 SpriteRenderer:
   m_ObjectHideFlags: 1

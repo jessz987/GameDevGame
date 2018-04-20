@@ -246,7 +246,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 37859931}
-  m_Text: click to restart...
+  m_Text: press SPACE to restart...
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472ecfe69ce18144285753d0733d907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restart: 32
 --- !u!61 &37859936
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 
 public class RestartController : MonoBehaviour {
-    	
+
+    public KeyCode restart;
+    
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(restart))
         {
             SceneManager.LoadScene("Rooftop");
 
