@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 58dfa4a0e83a4d049bbfa0654c8ba6fa
-timeCreated: 1522111123
+guid: c2ebe9f33ad955641a7d8b85d7f732d2
+timeCreated: 1524073729
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playerAttackAnimation_0
-    21300002: playerAttackAnimation_1
-    21300004: playerAttackAnimation_2
-    21300006: playerAttackAnimation_3
-    21300008: playerAttackAnimation_4
-    21300010: playerAttackAnimation_5
+    21300000: wine animation_0
+    21300002: wine animation_1
+    21300004: wine animation_2
+    21300006: wine animation_3
+    21300008: wine animation_4
+    21300010: wine animation_5
+    21300012: wine animation_6
+    21300014: wine animation_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -96,85 +98,113 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerAttackAnimation_0
+      name: wine animation_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 65
-        width: 56
+        x: 0
+        y: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_1
+      name: wine animation_1
       rect:
         serializedVersion: 2
-        x: 70
-        y: 65
-        width: 56
+        x: 32
+        y: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_2
+      name: wine animation_2
       rect:
         serializedVersion: 2
-        x: 134
-        y: 65
-        width: 56
+        x: 64
+        y: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_3
+      name: wine animation_3
       rect:
         serializedVersion: 2
-        x: 6
-        y: 1
-        width: 56
+        x: 96
+        y: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_4
+      name: wine animation_4
       rect:
         serializedVersion: 2
-        x: 70
-        y: 1
-        width: 56
+        x: 0
+        y: 64
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_5
+      name: wine animation_5
       rect:
         serializedVersion: 2
-        x: 134
-        y: 1
-        width: 56
+        x: 32
+        y: 64
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wine animation_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wine animation_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 55716266}
   - component: {fileID: 55716265}
   - component: {fileID: 55716264}
+  - component: {fileID: 55716263}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -492,12 +493,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55716261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.1676965, y: 0.29999995, z: 0}
+  m_LocalPosition: {x: -7.21, y: 0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &55716263
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55716261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &55716264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -608,6 +626,7 @@ GameObject:
   - component: {fileID: 109341558}
   - component: {fileID: 109341557}
   - component: {fileID: 109341556}
+  - component: {fileID: 109341555}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -615,6 +634,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &109341555
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 109341554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &109341556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2920,6 +2956,7 @@ GameObject:
   - component: {fileID: 1197302612}
   - component: {fileID: 1197302611}
   - component: {fileID: 1197302610}
+  - component: {fileID: 1197302609}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -2941,6 +2978,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1197302609
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197302607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &1197302610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3923,8 +3977,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386719788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.33, y: 0.423, z: 0}
-  m_LocalScale: {x: 2.6101265, y: 1.7489241, z: 1.9346387}
+  m_LocalPosition: {x: -0.33, y: 1.588, z: 0}
+  m_LocalScale: {x: 2.6101265, y: 1.9818673, z: 1.9346387}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 49
@@ -4050,6 +4104,7 @@ GameObject:
   - component: {fileID: 1431336774}
   - component: {fileID: 1431336773}
   - component: {fileID: 1431336772}
+  - component: {fileID: 1431336771}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -4071,6 +4126,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1431336771
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431336769}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &1431336772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4167,6 +4239,7 @@ GameObject:
   - component: {fileID: 1450806254}
   - component: {fileID: 1450806253}
   - component: {fileID: 1450806252}
+  - component: {fileID: 1450806251}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -4188,6 +4261,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1450806251
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1450806249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &1450806252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4284,6 +4374,7 @@ GameObject:
   - component: {fileID: 1503204765}
   - component: {fileID: 1503204764}
   - component: {fileID: 1503204763}
+  - component: {fileID: 1503204762}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -4299,12 +4390,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503204760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.161088, y: 3.1999998, z: 0}
+  m_LocalPosition: {x: 4.161088, y: 3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1503204762
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503204760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &1503204763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4866,6 +4974,7 @@ GameObject:
   - component: {fileID: 1922785340}
   - component: {fileID: 1922785339}
   - component: {fileID: 1922785338}
+  - component: {fileID: 1922785337}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -4881,12 +4990,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1922785335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.2899995, y: 3.1999998, z: 0}
+  m_LocalPosition: {x: -7.25, y: 2.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1922785337
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1922785335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &1922785338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5281,6 +5407,7 @@ GameObject:
   - component: {fileID: 2086873639}
   - component: {fileID: 2086873638}
   - component: {fileID: 2086873637}
+  - component: {fileID: 2086873636}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -5302,6 +5429,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2086873636
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2086873634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5d94bf484d2c8543bad2569f7cec862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &2086873637
 BoxCollider2D:
   m_ObjectHideFlags: 0

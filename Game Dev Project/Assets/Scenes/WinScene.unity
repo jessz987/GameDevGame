@@ -319,7 +319,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 144178435}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 60
   simulationSpeed: 0.8
   stopAction: 0
   looping: 0
@@ -372,14 +372,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 80986651
+  randomSeed: -2108100414
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 60
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -768,7 +768,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 50
+    maxNumParticles: 100
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4067,7 +4067,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403036949}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 60
   simulationSpeed: 0.8
   stopAction: 0
   looping: 0
@@ -4120,14 +4120,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 352003102
+  randomSeed: 1593007449
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 60
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4516,7 +4516,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 50
+    maxNumParticles: 100
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -7662,7 +7662,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -182161078
+  randomSeed: 2020219452
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10970,7 +10970,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 527828817}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.05, y: -0.35, z: 0.3125}
+  m_LocalPosition: {x: -0.05, y: -0.35, z: 2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11224,7 +11224,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 804122192}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 60
   simulationSpeed: 0.8
   stopAction: 0
   looping: 0
@@ -11284,7 +11284,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 60
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -11673,7 +11673,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 50
+    maxNumParticles: 100
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -15401,7 +15401,8 @@ Prefab:
       propertyPath: m_Size.x
       value: 4.0754232
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61889532264374762, guid: 0710d4dc371e4004c95887e4744674e8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0710d4dc371e4004c95887e4744674e8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1568215153
@@ -16043,7 +16044,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2046586854}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 60
   simulationSpeed: 0.8
   stopAction: 0
   looping: 0
@@ -16103,7 +16104,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 60
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -16492,7 +16493,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 50
+    maxNumParticles: 100
     size3D: 0
     rotation3D: 0
     gravityModifier:

@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 58dfa4a0e83a4d049bbfa0654c8ba6fa
-timeCreated: 1522111123
+guid: 3f0f832955a3132468502106c66803c4
+timeCreated: 1524244644
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playerAttackAnimation_0
-    21300002: playerAttackAnimation_1
-    21300004: playerAttackAnimation_2
-    21300006: playerAttackAnimation_3
-    21300008: playerAttackAnimation_4
-    21300010: playerAttackAnimation_5
+    21300000: catnip animation_0
+    21300002: catnip animation_1
+    21300004: catnip animation_2
+    21300006: catnip animation_3
+    21300008: catnip animation_4
+    21300010: catnip animation_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -96,85 +96,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerAttackAnimation_0
+      name: catnip animation_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 65
-        width: 56
+        x: 0
+        y: 32
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_1
+      name: catnip animation_1
       rect:
         serializedVersion: 2
-        x: 70
-        y: 65
-        width: 56
+        x: 32
+        y: 32
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_2
+      name: catnip animation_2
       rect:
         serializedVersion: 2
-        x: 134
-        y: 65
-        width: 56
+        x: 64
+        y: 32
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_3
+      name: catnip animation_3
       rect:
         serializedVersion: 2
-        x: 6
-        y: 1
-        width: 56
+        x: 0
+        y: 0
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_4
+      name: catnip animation_4
       rect:
         serializedVersion: 2
-        x: 70
-        y: 1
-        width: 56
+        x: 32
+        y: 0
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerAttackAnimation_5
+      name: catnip animation_5
       rect:
         serializedVersion: 2
-        x: 134
-        y: 1
-        width: 56
+        x: 64
+        y: 0
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
