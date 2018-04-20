@@ -2114,7 +2114,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09376633, y: 0.13458157}
+  m_Offset: {x: -0.2212081, y: 0.13458157}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2125,7 +2125,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5020592, y: 1.7781911}
+  m_Size: {x: 3.9725423, y: 1.7781911}
   m_EdgeRadius: 0
 --- !u!212 &724993291
 SpriteRenderer:
@@ -2215,6 +2215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bouquetPrefab: {fileID: 1205958471803826, guid: 42962081e1913584eb9b72fc188a9a11,
     type: 2}
+  textbox: {fileID: 1242079718203874, guid: b74056c7253832945823d2ce39d93ddc, type: 2}
 --- !u!1001 &783016414
 Prefab:
   m_ObjectHideFlags: 0
@@ -3892,6 +3893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yarnPrefab: {fileID: 1259116748276842, guid: 9e6f3380e0c67544c96f95f2a8484b55, type: 2}
+  textbox: {fileID: 1242079718203874, guid: b74056c7253832945823d2ce39d93ddc, type: 2}
 --- !u!1 &1446219436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,7 +3925,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.046375394, y: 0}
+  m_Offset: {x: 0.06145954, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3934,7 +3936,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2}
+  m_Size: {x: 3.9312696, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &1446219438
 SpriteRenderer:
@@ -4024,6 +4026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winePrefab: {fileID: 1395932579804390, guid: 9002334afffaf684a9b2bade79c370c3, type: 2}
+  textbox: {fileID: 1242079718203874, guid: b74056c7253832945823d2ce39d93ddc, type: 2}
 --- !u!1001 &1450983045
 Prefab:
   m_ObjectHideFlags: 0
