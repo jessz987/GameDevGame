@@ -19,4 +19,8 @@ public class GameManager : MonoBehaviour {
     public static bool leftSpawn;
     public static bool rightSpawn;
     public static bool rooftopSpawn;
+
+    public static bool gotBouquet;
+    public static bool gotWine;
+    public static bool gotYarn;
 }
