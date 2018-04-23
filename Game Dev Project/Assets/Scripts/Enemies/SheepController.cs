@@ -18,6 +18,8 @@ public class SheepController : MonoBehaviour {
     
     public AudioClip hitSound;
 
+    bool WoolLeft;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -62,8 +64,20 @@ public class SheepController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Weapon")
         {
+            WoolLeft = true;
+            if (WoolLeft == true)
+            {
+                anim.SetBool("NoWool", true);
+            }
+
             Sound.me.PlaySoundJitter(hitSound, 1f, 0.2f, 1.3f, 0.5f);
             woolLimit--;
+
+            if (woolLimit > 0)
+            {
+                WoolLeft = false;
+            }
+
             if (woolLimit >= 0)
             {
                 GameObject wool = Instantiate(woolPrefab);
@@ -73,6 +87,18 @@ public class SheepController : MonoBehaviour {
 
                 wool.transform.position = newPos;
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (WoolLeft)
+        {
+            anim.SetBool("NoWool", true);
+        }
+        else
+        {
+            anim.SetBool("NoWool", false);
         }
     }
 }

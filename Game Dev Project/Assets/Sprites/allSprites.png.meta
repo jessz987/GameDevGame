@@ -52,6 +52,8 @@ TextureImporter:
     21300090: cloud6
     21300092: cloud7
     21300094: textBox
+    21300096: sheep4
+    21300098: sheep3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -734,7 +736,35 @@ TextureImporter:
         width: 22
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheep4
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 821
+        width: 67
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheep3
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 821
+        width: 67
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -22,7 +22,6 @@ public class WineNPCController : MonoBehaviour {
             if (GameManager.numCatnip >= 15 && GameManager.numGrapes >= 15)
             {
                 GameManager.gotWine = true;
-                Debug.Log("trade for wine");
                 GameManager.numGrapes -= 15;
                 GameManager.numCatnip -= 15;
                 GameManager.numWine++;
