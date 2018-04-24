@@ -6,18 +6,10 @@ public class ClothesNPCController : MonoBehaviour {
 
     public GameObject yarnPrefab;
 
-    public GameObject textbox;
-    private GameObject textBoxClone;
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            textBoxClone = Instantiate(textbox);
-            Vector3 boxPos = textbox.transform.position;
-            boxPos.x = 8f;
-            boxPos.y = -2f; ;
-            textbox.transform.position = boxPos;
 
             if (GameManager.numWool >= 10)
             {
@@ -33,10 +25,5 @@ public class ClothesNPCController : MonoBehaviour {
                 yarn.transform.position = newPos;
             }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Destroy(textBoxClone);
     }
 }

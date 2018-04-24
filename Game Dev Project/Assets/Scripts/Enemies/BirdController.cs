@@ -15,6 +15,9 @@ public class BirdController : MonoBehaviour {
     
     public AudioClip hitSound;
 
+    float stunTimer = 0;
+    float stunDuration = 2f;
+
     void Start () {
         health = 2;
         sr = GetComponent<SpriteRenderer>();

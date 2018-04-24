@@ -5,19 +5,11 @@ using UnityEngine;
 public class WineNPCController : MonoBehaviour {
 
     public GameObject winePrefab;
-
-    public GameObject textbox;
-    private GameObject textBoxClone;
-
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            textBoxClone = Instantiate(textbox);
-            Vector3 boxPos = textbox.transform.position;
-            boxPos.x = -6f;
-            boxPos.y = -2f; ;
-            textbox.transform.position = boxPos;
 
             if (GameManager.numCatnip >= 15 && GameManager.numGrapes >= 15)
             {
@@ -33,10 +25,5 @@ public class WineNPCController : MonoBehaviour {
                 wine.transform.position = newPos;
             }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Destroy(textBoxClone);
     }
 }

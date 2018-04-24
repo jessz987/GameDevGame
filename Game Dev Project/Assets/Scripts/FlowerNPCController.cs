@@ -6,18 +6,10 @@ public class FlowerNPCController : MonoBehaviour {
 
     public GameObject bouquetPrefab;
 
-    public GameObject textbox;
-    private GameObject textBoxClone;
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            textBoxClone = Instantiate(textbox);
-            Vector3 boxPos = textbox.transform.position;
-            boxPos.x = -1.3f;
-            boxPos.y = -2.1f; ;
-            textbox.transform.position = boxPos;
 
             if (GameManager.numFlowers >= 20)
             {
@@ -33,10 +25,5 @@ public class FlowerNPCController : MonoBehaviour {
                 bouquet.transform.position = newPos;
             }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Destroy(textBoxClone);
     }
 }
