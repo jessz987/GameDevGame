@@ -13,5 +13,9 @@ public class YarnUIController : MonoBehaviour {
         {
             yarn.SetActive(true);
         }
+        else
+        {
+            yarn.SetActive(false);
+        }
     }
 }

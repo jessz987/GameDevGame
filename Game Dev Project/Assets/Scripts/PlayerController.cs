@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
         if (GameManager.rooftopSpawn == true)
         {
             Vector3 playerpos = transform.position;
-            playerpos.x = 2f;
+            playerpos.x = -1f;
             playerpos.y = 2.4f;
             transform.position = playerpos;
             Debug.Log("spawned center");

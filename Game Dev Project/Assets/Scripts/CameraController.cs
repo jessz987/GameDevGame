@@ -18,12 +18,10 @@ public class CameraController : MonoBehaviour
     {
         Vector3 target = player.transform.position + offset;
         float camXExtent = Camera.main.orthographicSize * Camera.main.aspect;
-
-        Debug.Log("camXExtent: " + camXExtent + ". target: " + target);
+        
 
         if (target.x + camXExtent > Xmax + camXExtent)
         {
-            Debug.Log("constraining max x");
             target.x = Xmax;
         }
 

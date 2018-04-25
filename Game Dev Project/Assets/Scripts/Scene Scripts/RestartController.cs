@@ -18,6 +18,13 @@ public class RestartController : MonoBehaviour {
             GameManager.numFlowers = 0;
             GameManager.numCatnip = 0;
             GameManager.numGrapes = 0;
+            GameManager.numBouquet = 0;
+            GameManager.numWine = 0;
+            GameManager.numYarn = 0;
+
+            GameManager.gotBouquet = false;
+            GameManager.gotWine = false;
+            GameManager.gotYarn = false;
         }
 	}
 }

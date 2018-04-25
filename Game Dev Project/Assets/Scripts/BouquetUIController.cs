@@ -13,5 +13,9 @@ public class BouquetUIController : MonoBehaviour {
         {
             bouquet.SetActive(true);
         }
+        else
+        {
+            bouquet.SetActive(false); 
+        }
     }
 }

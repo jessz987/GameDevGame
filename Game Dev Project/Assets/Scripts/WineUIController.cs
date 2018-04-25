@@ -13,5 +13,9 @@ public class WineUIController : MonoBehaviour {
         {
             wine.SetActive(true);
         }
+        else
+        {
+            wine.SetActive(false);
+        }
     }
 }
