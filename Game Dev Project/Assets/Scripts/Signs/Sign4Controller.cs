@@ -11,8 +11,6 @@ public class Sign4Controller : MonoBehaviour {
         PlayerController p = coll.gameObject.GetComponent<PlayerController>();
         if (p != null)
         {
-            Debug.Log("door");
-
             if (SceneManage.previousScene == "Forest1")
             {
                 Vector3 pos = GameObject.Find("Player").transform.position;

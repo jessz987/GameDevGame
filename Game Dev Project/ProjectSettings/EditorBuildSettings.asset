@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest3.unity
     guid: 629fc727853d10042b3a77f40f232502
   - enabled: 1
+    path: Assets/Scenes/Forest1.5.unity
+    guid: 384bf3dd70c3a8747a05deb0f7332f41
+  - enabled: 1
+    path: Assets/Scenes/Forest2.5.unity
+    guid: a267aa1e674929e40b14ce2e3fc6e4d3
+  - enabled: 1
+    path: Assets/Scenes/Forest3.5.unity
+    guid: be5e0e59399865c4fb2004b84065fc5c
+  - enabled: 1
     path: Assets/Scenes/Rooftop.unity
     guid: e86390b132e868440b06d33e46b21d4f
   - enabled: 1

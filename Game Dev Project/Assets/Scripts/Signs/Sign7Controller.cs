@@ -12,8 +12,7 @@ public class Sign7Controller : MonoBehaviour
         PlayerController p = coll.gameObject.GetComponent<PlayerController>();
         if (p != null)
         {
-            Debug.Log("door");
-            SceneManager.LoadScene("Forest3");
+            SceneManager.LoadScene("Forest2.5");
         }
     }
 }

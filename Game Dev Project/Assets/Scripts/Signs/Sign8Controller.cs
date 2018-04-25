@@ -12,8 +12,7 @@ public class Sign8Controller : MonoBehaviour
         PlayerController p = coll.gameObject.GetComponent<PlayerController>();
         if (p != null)
         {
-            Debug.Log("door");
-            SceneManager.LoadScene("Forest2");
+            SceneManager.LoadScene("Forest2.5");
         }
     }
 }

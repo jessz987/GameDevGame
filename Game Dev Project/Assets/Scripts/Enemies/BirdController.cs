@@ -16,14 +16,20 @@ public class BirdController : MonoBehaviour {
     public AudioClip hitSound;
 
     float stunTimer = 0;
-    float stunDuration = 2f;
+    float stunDuration = 0.7f;
+    float myTime = 0;
 
     void Start () {
         health = 2;
         sr = GetComponent<SpriteRenderer>();
     }
-	
-	void Update () {
+
+    void Stunned()
+    {
+        stunTimer = stunDuration;
+    }
+
+    void Update () {
         anim = GetComponent<Animator>();
         if (health <= 0)
         {
@@ -40,34 +46,43 @@ public class BirdController : MonoBehaviour {
         {
             sr.flipX = true;
         }
-	}
+
+        stunTimer -= Time.deltaTime;
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Weapon")
         {
+            Stunned();
             anim.SetTrigger("hurt");
             Sound.me.PlaySoundJitter(hitSound, 1f, 0.2f, 1.3f, 0.5f);
             health--;
-            Debug.Log("bird has " + health + " health left");
         }
     }
 
     void Patrol ()
     {
-        Vector3 newPos = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(Time.time * speed, 1f));
-
-        Vector3 direction = newPos - transform.position;
-
-        if (Mathf.Sign(direction.x) > 0)
+        if (stunTimer <= 0)
         {
-            faceLeft = false;
-        }
-        else
-        {
-            faceLeft = true;
+            Vector3 newPos = Vector3.Lerp(patrolPositions[0].position, patrolPositions[1].position, Mathf.PingPong(myTime * speed, 1f));
+
+            Vector3 direction = newPos - transform.position;
+
+            if (Mathf.Sign(direction.x) > 0)
+            {
+                faceLeft = false;
+            }
+            else
+            {
+                faceLeft = true;
+            }
+
+            transform.position = newPos;
+
+            myTime += Time.deltaTime;
         }
 
-        transform.position = newPos;
+        
     }
 }

@@ -70,9 +70,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.19138655
-  m_TransitionOffset: 0.23445383
-  m_ExitTime: 0.7033615
+  m_TransitionDuration: 0.23189686
+  m_TransitionOffset: 0.24012291
+  m_ExitTime: 0.7246206
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -111,7 +111,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: birdHurt
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101804616522453720}
@@ -143,7 +143,7 @@ AnimatorStateMachine:
     m_Position: {x: 192, y: 204, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102330551371239860}
-    m_Position: {x: 147.09424, y: 274.81857, z: 0}
+    m_Position: {x: 144, y: 276, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
